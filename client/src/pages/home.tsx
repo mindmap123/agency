@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import Logo from "@/components/Logo";
 import { 
   Monitor, 
   Sparkles, 
@@ -197,9 +198,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary" style={{ WebkitBackgroundClip: 'text', backgroundClip: 'text' }}>
-                Next Level
-              </h1>
+              <a href="/" className="block" data-testid="logo-link">
+                <Logo className="h-9 w-auto" />
+              </a>
             </div>
 
             <div className="hidden md:flex items-center space-x-4">
