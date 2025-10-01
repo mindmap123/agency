@@ -15,7 +15,14 @@ import {
   X,
   Code,
   ShoppingCart,
-  ArrowRight
+  ArrowRight,
+  ArrowUpRight,
+  ChevronRight,
+  Search,
+  Megaphone,
+  Bot,
+  Zap,
+  FileText
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -187,49 +194,31 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-20">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-foreground">Next Level</h1>
+              <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary" style={{ WebkitBackgroundClip: 'text', backgroundClip: 'text' }}>
+                Next Level
+              </h1>
             </div>
 
-            <div className="hidden md:flex items-center space-x-8">
-              <a
-                href="#expertises"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="link-services"
-              >
-                Expertises
-              </a>
-              <a
-                href="#gso"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="link-gso"
-              >
-                GSO
-              </a>
-              <a
-                href="#agence"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="link-advantages"
-              >
-                L'agence
-              </a>
+            <div className="hidden md:flex items-center space-x-4">
               <a
                 href="#contact"
-                className="bg-primary text-primary-foreground px-5 py-2 rounded-md hover:bg-primary/90 transition-colors font-medium text-sm"
-                data-testid="link-contact-nav"
-              >
-                Nous contacter
-              </a>
-              <a
-                href="#contact"
-                className="border border-border px-5 py-2 rounded-md hover:border-primary hover:text-primary transition-colors font-medium text-sm inline-flex items-center gap-2"
+                className="bg-primary text-primary-foreground px-6 py-2.5 rounded-lg hover:bg-primary/90 transition-all font-medium text-sm inline-flex items-center gap-2 shadow-lg shadow-primary/25"
                 data-testid="link-rdv-nav"
               >
-                Prendre RDV 📅
+                Prendre RDV
+                <ArrowUpRight className="w-4 h-4" />
               </a>
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2.5 rounded-lg hover:bg-primary/10 transition-colors"
+                data-testid="button-menu"
+              >
+                <Menu className="w-6 h-6 text-foreground" />
+              </button>
             </div>
 
             <button
@@ -246,42 +235,68 @@ export default function Home() {
           </div>
 
           {mobileMenuOpen && (
-            <div className="md:hidden py-4 space-y-4">
-              <a
-                href="#expertises"
-                className="block text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="link-services-mobile"
-              >
-                Expertises
-              </a>
-              <a
-                href="#gso"
-                className="block text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="link-gso-mobile"
-              >
-                GSO
-              </a>
-              <a
-                href="#agence"
-                className="block text-muted-foreground hover:text-foreground transition-colors"
-                data-testid="link-advantages-mobile"
-              >
-                L'agence
-              </a>
-              <a
-                href="#contact"
-                className="block bg-primary text-primary-foreground px-5 py-2 rounded-md hover:bg-primary/90 transition-colors font-medium text-center"
-                data-testid="link-contact-mobile"
-              >
-                Nous contacter
-              </a>
-              <a
-                href="#contact"
-                className="block border border-border px-5 py-2 rounded-md hover:border-primary hover:text-primary transition-colors font-medium text-center"
-                data-testid="link-rdv-mobile"
-              >
-                Prendre RDV 📅
-              </a>
+            <div className="absolute top-20 left-0 right-0 bg-background/98 backdrop-blur-xl shadow-2xl border-t border-border">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-2">
+                <a
+                  href="#expertises"
+                  className="block py-3 px-4 rounded-lg text-foreground hover:bg-primary/10 transition-all font-medium text-lg group"
+                  data-testid="link-services-mobile"
+                >
+                  <span className="flex items-center justify-between">
+                    Expertises
+                    <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                  </span>
+                </a>
+                <a
+                  href="#gso"
+                  className="block py-3 px-4 rounded-lg text-foreground hover:bg-primary/10 transition-all font-medium text-lg group"
+                  data-testid="link-gso-mobile"
+                >
+                  <span className="flex items-center justify-between">
+                    GSO
+                    <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                  </span>
+                </a>
+                <a
+                  href="#agence"
+                  className="block py-3 px-4 rounded-lg text-foreground hover:bg-primary/10 transition-all font-medium text-lg group"
+                  data-testid="link-advantages-mobile"
+                >
+                  <span className="flex items-center justify-between">
+                    L'agence
+                    <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                  </span>
+                </a>
+                <a
+                  href="#realisations"
+                  className="block py-3 px-4 rounded-lg text-foreground hover:bg-primary/10 transition-all font-medium text-lg group"
+                  data-testid="link-projects-mobile"
+                >
+                  <span className="flex items-center justify-between">
+                    Réalisations
+                    <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                  </span>
+                </a>
+                <a
+                  href="#contact"
+                  className="block py-3 px-4 rounded-lg text-foreground hover:bg-primary/10 transition-all font-medium text-lg group"
+                  data-testid="link-contact-mobile"
+                >
+                  <span className="flex items-center justify-between">
+                    Contact
+                    <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                  </span>
+                </a>
+                <div className="pt-4 mt-4 border-t border-border">
+                  <a
+                    href="#contact"
+                    className="block bg-primary text-primary-foreground px-6 py-3.5 rounded-lg hover:bg-primary/90 transition-all font-semibold text-center shadow-lg shadow-primary/25"
+                    data-testid="link-rdv-mobile"
+                  >
+                    Prendre RDV 📅
+                  </a>
+                </div>
+              </div>
             </div>
           )}
         </div>
@@ -470,31 +485,98 @@ export default function Home() {
         </div>
       </section>
 
-      {/* GSO Section */}
-      <section id="gso" className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* SEO, GSO et Acquisition Digitale Section */}
+      <section id="gso" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 fade-in">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              <span className="accent-text">GSO</span> - Optimisation pour les moteurs IA
+            <h2 className="text-3xl sm:text-5xl font-bold mb-6">
+              <span className="accent-text">SEO, GSO et Acquisition Digitale</span> : <br />
+              Propulsez votre visibilité en ligne
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Optimisez votre présence sur les moteurs de recherche d'intelligence artificielle. Soyez trouvé par ChatGPT, Claude, Perplexity et Gemini.
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto mb-6">
+              Le référencement est le pilier de votre succès digital. Next Level déploie une stratégie d'acquisition complète qui combine les techniques éprouvées du SEO traditionnel et les innovations du GSO (Generative Search Optimization). Notre objectif : vous positionner là où vos clients vous cherchent, que ce soit sur Google, ChatGPT, Claude ou Perplexity.
+            </p>
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto mb-8">
+              Nous mettons en place des stratégies data-driven et des techniques de growth hacking pour maximiser votre ROI. Selon votre secteur et vos objectifs, nous activons les leviers les plus performants : SEA, marketing automation, optimisation technique ou création de contenu optimisé pour les moteurs IA.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 fade-in">
-            {["ChatGPT", "Claude", "Perplexity", "Gemini", "DeepSeek"].map((llm, index) => (
-              <div
-                key={index}
-                className="bg-card p-6 rounded-lg border border-border text-center hover:shadow-lg transition-shadow"
-                data-testid={`llm-${index}`}
-              >
-                <div className="w-12 h-12 bg-primary/10 rounded-lg mx-auto mb-3 flex items-center justify-center">
-                  <Sparkles className="w-6 h-6 text-primary" />
-                </div>
-                <span className="font-semibold text-sm">{llm}</span>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 fade-in">
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all group">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <Search className="w-7 h-7 text-primary" />
               </div>
-            ))}
+              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">SEO - Référencement naturel Google</h3>
+              <p className="text-muted-foreground">Positionnement durable sur les requêtes stratégiques</p>
+            </div>
+
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all group">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <Bot className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">GSO - Optimisation pour moteurs IA</h3>
+              <p className="text-muted-foreground">Visibilité sur ChatGPT, Claude, Perplexity, Gemini, DeepSeek, Grok</p>
+            </div>
+
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all group">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <Zap className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">Optimisation technique & hébergement</h3>
+              <p className="text-muted-foreground">Performance, sécurité et vitesse de chargement</p>
+            </div>
+
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all group">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <FileText className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">Rédaction de contenu SEO/GSO</h3>
+              <p className="text-muted-foreground">Contenus optimisés pour humains et intelligences artificielles</p>
+            </div>
+
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all group">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <Megaphone className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">SEA - Campagnes Google Ads</h3>
+              <p className="text-muted-foreground">Acquisition payante ciblée et rentable</p>
+            </div>
+
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all group">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <RefreshCw className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">Marketing automation</h3>
+              <p className="text-muted-foreground">Nurturing et conversion automatisés</p>
+            </div>
+
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all group lg:col-span-3 md:col-span-2">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <TrendingUp className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">Growth hacking</h3>
+              <p className="text-muted-foreground">Stratégies innovantes pour une croissance accélérée</p>
+            </div>
+          </div>
+
+          <div className="text-center fade-in">
+            <p className="text-xl font-semibold text-foreground mb-6">
+              Nous transformons votre présence en ligne en machine d'acquisition performante et mesurable.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
+              {["ChatGPT", "Claude", "Perplexity", "Gemini", "DeepSeek", "Grok"].map((llm, index) => (
+                <div
+                  key={index}
+                  className="bg-card p-4 rounded-lg border border-border text-center hover:shadow-lg transition-shadow"
+                  data-testid={`llm-${index}`}
+                >
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                    <Sparkles className="w-5 h-5 text-primary" />
+                  </div>
+                  <span className="font-semibold text-xs">{llm}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
