@@ -35,6 +35,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { useToast } from "@/hooks/use-toast";
 
 const contactFormSchema = z.object({
@@ -150,11 +156,6 @@ export default function Home() {
     { value: "4,9/5", label: "note sur Google", sublabel: "Reflétant la satisfaction de nos clients" },
   ];
 
-  const clients = [
-    "Carrefour", "Veja", "Sunday", "Cofidis", "Dalloyau", 
-    "SNCF", "Aéroports de Paris", "Emmaüs", "MEDEF"
-  ];
-
   const technologies = [
     { name: "WordPress", icon: Code },
     { name: "Shopify", icon: ShoppingCart },
@@ -222,6 +223,13 @@ export default function Home() {
               >
                 Nous contacter
               </a>
+              <a
+                href="#contact"
+                className="border border-border px-5 py-2 rounded-md hover:border-primary hover:text-primary transition-colors font-medium text-sm inline-flex items-center gap-2"
+                data-testid="link-rdv-nav"
+              >
+                Prendre RDV 📅
+              </a>
             </div>
 
             <button
@@ -267,6 +275,13 @@ export default function Home() {
               >
                 Nous contacter
               </a>
+              <a
+                href="#contact"
+                className="block border border-border px-5 py-2 rounded-md hover:border-primary hover:text-primary transition-colors font-medium text-center"
+                data-testid="link-rdv-mobile"
+              >
+                Prendre RDV 📅
+              </a>
             </div>
           )}
         </div>
@@ -301,22 +316,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-
-          {/* Clients Carousel */}
-          <div className="mt-20 fade-in">
-            <div className="overflow-hidden">
-              <div className="flex gap-12 items-center justify-center flex-wrap">
-                {clients.map((client, index) => (
-                  <div
-                    key={index}
-                    className="text-muted-foreground font-medium text-lg opacity-60 hover:opacity-100 transition-opacity"
-                  >
-                    {client}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -328,7 +327,7 @@ export default function Home() {
               L'agence web <span className="accent-text">Next Level</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Avec plusieurs années d'expérience, Next Level est reconnue pour son <strong>expertise en développement</strong> de solutions digitales sur-mesure.
+              Avec près de 5 ans d'expérience, Next Level est reconnue pour son <strong>expertise en développement</strong> de solutions digitales sur-mesure.
             </p>
             <p className="text-lg text-muted-foreground mb-8">
               Grâce à notre expertise et notre réactivité, nous avons établi une relation de confiance durable avec l'ensemble de nos clients.
@@ -411,11 +410,20 @@ export default function Home() {
               <h2 className="text-3xl sm:text-4xl font-bold mb-6">
                 Next Level, votre <span className="accent-text">agence web</span> à Bordeaux
               </h2>
+              <h3 className="text-xl font-bold mb-4 text-foreground">
+                Découvrez l'ensemble de nos expertises digitales
+              </h3>
               <p className="text-lg text-muted-foreground mb-6">
-                Créer un site internet demande des compétences en développement, une maîtrise technique poussée, ainsi que l'accompagnement de chefs de projet et de professionnels chevronnés.
+                Que votre objectif soit de créer un site innovant, de lancer une boutique en ligne, d'améliorer votre marketing digital ou votre référencement, nous sommes à vos côtés. Nous vous proposons des solutions efficaces et pérennes qui répondent à vos besoins.
+              </p>
+              <h3 className="text-xl font-bold mb-4 text-foreground">
+                SEO & GSO : Dominez les moteurs de recherche traditionnels et IA
+              </h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                Au-delà du référencement Google classique, nous optimisons votre présence sur les moteurs de recherche nouvelle génération. Grâce à notre expertise en <strong>GSO (Generative Search Optimization)</strong>, votre entreprise apparaît dans les réponses de ChatGPT, Claude, Perplexity, Gemini et DeepSeek. Cette visibilité sur les intelligences artificielles est devenue aussi cruciale que le SEO traditionnel pour capter vos futurs clients.
               </p>
               <p className="text-lg text-muted-foreground mb-8">
-                Que votre projet concerne la mise en place d'un site vitrine ou d'une plateforme e-commerce, notre <strong>agence digitale</strong> est là pour vous guider à chaque étape.
+                De plus, nous gérons vos projets de refonte, nous nous chargeons de la maintenance et de l'hébergement de vos sites, élaborons des stratégies SEO et GSO complètes, et optimisons vos campagnes Google Ads pour maximiser votre retour sur investissement et renforcer durablement votre présence en ligne.
               </p>
               <a
                 href="#realisations"
@@ -543,6 +551,108 @@ export default function Home() {
           >
             Demander un devis
           </a>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12 fade-in">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Questions <span className="accent-text">fréquentes</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Tout ce que vous devez savoir sur notre agence web à Bordeaux
+            </p>
+          </div>
+
+          <div className="bg-card rounded-lg p-8 border border-border fade-in">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="text-left text-lg font-semibold">
+                  Qu'est-ce qu'une agence web à Bordeaux ?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Une agence web à Bordeaux est une entreprise spécialisée dans la création et l'optimisation de la présence digitale des entreprises. Next Level accompagne les professionnels bordelais dans leur transformation numérique en proposant des solutions sur mesure : sites internet performants, référencement SEO et GSO, et publicité digitale.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2">
+                <AccordionTrigger className="text-left text-lg font-semibold">
+                  Quels services propose une agence web à Bordeaux ?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Création de sites internet modernes et responsive</li>
+                    <li>Référencement naturel SEO pour Google</li>
+                    <li>GSO (Generative Search Optimization) pour les moteurs IA (ChatGPT, Claude, Perplexity, Gemini, DeepSeek)</li>
+                    <li>Publicité Google Ads et campagnes digitales</li>
+                    <li>Maintenance et hébergement de sites web</li>
+                    <li>Refonte de sites existants</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3">
+                <AccordionTrigger className="text-left text-lg font-semibold">
+                  Pourquoi faire appel à une agence web basée à Bordeaux ?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Proximité géographique facilitant les échanges et réunions en présentiel</li>
+                    <li>Connaissance approfondie du tissu économique bordelais et de ses spécificités</li>
+                    <li>Disponibilité et réactivité accrues grâce au même fuseau horaire</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4">
+                <AccordionTrigger className="text-left text-lg font-semibold">
+                  Combien coûte une agence web à Bordeaux ?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Site vitrine professionnel : à partir de 1 000€</li>
+                    <li>Site e-commerce : à partir de 5 000€</li>
+                    <li>Prestations SEO/GSO : forfaits mensuels à partir de 800€/mois</li>
+                  </ul>
+                  <p className="mt-3">Les tarifs varient selon la complexité du projet, les fonctionnalités souhaitées et l'accompagnement requis.</p>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5">
+                <AccordionTrigger className="text-left text-lg font-semibold">
+                  Quelles entreprises peuvent bénéficier des services d'une agence web à Bordeaux ?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>TPE et PME souhaitant développer leur présence en ligne</li>
+                    <li>Commerces et artisans bordelais cherchant à digitaliser leur activité</li>
+                    <li>Startups nécessitant un site performant et évolutif</li>
+                    <li>Grandes entreprises recherchant une expertise locale pour des projets spécifiques</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6">
+                <AccordionTrigger className="text-left text-lg font-semibold">
+                  Une agence web à Bordeaux peut-elle gérer un projet à distance ?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Absolument. Bien que basée à Bordeaux, Next Level accompagne des clients partout en France et à l'international. Nous combinons rencontres physiques pour les clients bordelais et visioconférences efficaces pour les projets à distance, garantissant le même niveau de qualité et de suivi quel que soit votre emplacement.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-7">
+                <AccordionTrigger className="text-left text-lg font-semibold">
+                  Pourquoi Next Level est-elle une des meilleures agences web à Bordeaux ?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground">
+                  Next Level se distingue par son expertise de pointe en GSO, une technologie d'avenir que peu d'agences maîtrisent encore. Nous ne nous contentons pas de vous positionner sur Google : nous assurons votre visibilité sur les intelligences artificielles qui transforment la recherche d'information. Notre approche combine performance technique, design moderne 2025 et stratégies d'optimisation avancées pour garantir des résultats mesurables et durables. À Bordeaux, nous sommes pionniers du référencement nouvelle génération.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
         </div>
       </section>
 
