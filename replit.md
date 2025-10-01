@@ -5,12 +5,13 @@
 Next Level is a professional web agency landing page application built for a Bordeaux-based digital agency. Redesigned to match the clean, professional style of beyonds.fr, the application showcases the agency's expertise in web development, SEO, GSO (Generative Search Optimization for AI search engines), Google Ads, site maintenance, and redesign services. Built with a modern full-stack architecture, it features a React frontend with shadcn/ui components, an Express backend, and PostgreSQL database support via Drizzle ORM.
 
 **Recent Changes (October 2025):**
-- Complete redesign to match beyonds.fr professional style
-- Simplified color palette: clean white background with primary blue (hsl(220, 90%, 56%))
-- Removed flashy gradients in favor of subtle, professional design
-- Reduced border radius from 1rem to 0.5rem for business-like appearance
-- Added client logos showcase, stats section, projects portfolio
-- Enhanced navigation and CTAs following beyonds.fr patterns
+- **Header redesign:** Transparent header with backdrop blur, minimalist desktop view showing only "Prendre RDV" button + burger menu
+- **Modern burger menu:** All navigation consolidated into burger menu with ChevronRight icons and smooth animations
+- **SEO/GSO/Acquisition section:** Comprehensive section with 7 expertises (SEO, GSO, technical optimization, content writing, SEA, marketing automation, growth hacking)
+- **AI engines:** Added Grok to the list (6 total: ChatGPT, Claude, Perplexity, Gemini, DeepSeek, Grok)
+- **Modern icons:** Replaced all ArrowRight with ArrowUpRight icons featuring diagonal hover animations
+- **Professional palette:** Primary blue (hsl(220, 90%, 56%)), clean white background, subtle gradients
+- Logo adapted to use primary color from site palette for visual consistency
 
 ## User Preferences
 
@@ -40,18 +41,19 @@ Preferred communication style: Simple, everyday language.
 - Subtle animations and hover effects for professional look
 
 **Site Structure:**
-- Hero: "Agence web à Bordeaux" with 2 CTAs (Contact + RDV)
-- Client logos carousel (Carrefour, Veja, Sunday, Cofidis, etc.)
-- Agency intro section with brief description
-- Expertises: 6 services with icons (Création sites, SEO, GSO, Google Ads, Refonte, Maintenance)
-- Stats: 50+ projects, 5 years experience, 8 experts, 4.9/5 Google rating
-- Agency section with image placeholder and description
-- Technologies: WordPress, Shopify, React, Next.js
-- GSO section: 5 LLM logos (ChatGPT, Claude, Perplexity, Gemini, DeepSeek)
-- Projects portfolio: 3 sample projects with cards
-- Strong CTA: "Vous avez un projet web? 🚀"
-- Contact form with validation
-- Professional dark footer with links and contact info
+- **Header:** Transparent with backdrop blur, desktop shows only "Prendre RDV" + burger menu
+- **Hero:** "Agence web à Bordeaux" with strong value proposition
+- **Agency intro:** Brief description highlighting 5 years experience
+- **Expertises:** 6 services with icons (Création sites, SEO, GSO, Google Ads, Refonte, Maintenance)
+- **Stats:** 50+ projects, 5 years experience, 8 experts, 4.9/5 Google rating
+- **Agency section:** Image placeholder with detailed description of digital expertise
+- **Technologies:** WordPress, Shopify, React, Next.js
+- **SEO/GSO/Acquisition:** Comprehensive section with 7 expertises and strategic approach
+- **AI engines:** 6 LLM logos (ChatGPT, Claude, Perplexity, Gemini, DeepSeek, Grok)
+- **Projects portfolio:** 3 sample projects with cards
+- **Strong CTA:** "Vous avez un projet web? 🚀"
+- **Contact form:** Validation with service selection
+- **Footer:** Professional dark footer with links and contact info
 
 **Directory Structure:**
 ```
