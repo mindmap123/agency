@@ -15,7 +15,6 @@ import {
   X,
   Code,
   ShoppingCart,
-  ArrowRight,
   ArrowUpRight,
   ChevronRight,
   Search,
@@ -206,11 +205,11 @@ export default function Home() {
             <div className="hidden md:flex items-center space-x-4">
               <a
                 href="#contact"
-                className="bg-primary text-primary-foreground px-6 py-2.5 rounded-lg hover:bg-primary/90 transition-all font-medium text-sm inline-flex items-center gap-2 shadow-lg shadow-primary/25"
+                className="bg-primary text-primary-foreground px-6 py-2.5 rounded-lg hover:bg-primary/90 transition-all font-medium text-sm inline-flex items-center gap-2 shadow-lg shadow-primary/25 group"
                 data-testid="link-rdv-nav"
               >
                 Prendre RDV
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -349,9 +348,10 @@ export default function Home() {
             </p>
             <a
               href="#realisations"
-              className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+              className="inline-flex items-center gap-2 text-primary font-semibold hover:underline group"
             >
-              Découvrir l'agence <ArrowRight className="w-4 h-4" />
+              Découvrir l'agence 
+              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </div>
         </div>
@@ -388,9 +388,10 @@ export default function Home() {
           <div className="text-center fade-in">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+              className="inline-flex items-center gap-2 text-primary font-semibold hover:underline group"
             >
-              Nos expertises <ArrowRight className="w-4 h-4" />
+              Nos expertises 
+              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </div>
         </div>
@@ -442,9 +443,10 @@ export default function Home() {
               </p>
               <a
                 href="#realisations"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:bg-primary/90 transition-colors group"
               >
-                Nos réalisations <ArrowRight className="w-4 h-4" />
+                Nos réalisations 
+                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
             </div>
 
@@ -607,9 +609,10 @@ export default function Home() {
                   <p className="text-muted-foreground mb-4">{project.description}</p>
                   <a
                     href="#contact"
-                    className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+                    className="inline-flex items-center gap-2 text-primary font-semibold hover:underline group"
                   >
-                    Voir le projet <ArrowRight className="w-4 h-4" />
+                    Voir le projet 
+                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </a>
                 </div>
               </div>
