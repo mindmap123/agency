@@ -569,7 +569,7 @@ export default function Home() {
           <div className="bg-card rounded-lg p-8 border border-border fade-in">
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
-                <AccordionTrigger className="text-left text-lg font-semibold">
+                <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-1">
                   Qu'est-ce qu'une agence web à Bordeaux ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -578,7 +578,7 @@ export default function Home() {
               </AccordionItem>
 
               <AccordionItem value="item-2">
-                <AccordionTrigger className="text-left text-lg font-semibold">
+                <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-2">
                   Quels services propose une agence web à Bordeaux ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -594,7 +594,7 @@ export default function Home() {
               </AccordionItem>
 
               <AccordionItem value="item-3">
-                <AccordionTrigger className="text-left text-lg font-semibold">
+                <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-3">
                   Pourquoi faire appel à une agence web basée à Bordeaux ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -607,7 +607,7 @@ export default function Home() {
               </AccordionItem>
 
               <AccordionItem value="item-4">
-                <AccordionTrigger className="text-left text-lg font-semibold">
+                <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-4">
                   Combien coûte une agence web à Bordeaux ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -621,7 +621,7 @@ export default function Home() {
               </AccordionItem>
 
               <AccordionItem value="item-5">
-                <AccordionTrigger className="text-left text-lg font-semibold">
+                <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-5">
                   Quelles entreprises peuvent bénéficier des services d'une agence web à Bordeaux ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -635,7 +635,7 @@ export default function Home() {
               </AccordionItem>
 
               <AccordionItem value="item-6">
-                <AccordionTrigger className="text-left text-lg font-semibold">
+                <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-6">
                   Une agence web à Bordeaux peut-elle gérer un projet à distance ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
@@ -644,7 +644,7 @@ export default function Home() {
               </AccordionItem>
 
               <AccordionItem value="item-7">
-                <AccordionTrigger className="text-left text-lg font-semibold">
+                <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-7">
                   Pourquoi Next Level est-elle une des meilleures agences web à Bordeaux ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
