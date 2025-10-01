@@ -2,7 +2,15 @@
 
 ## Overview
 
-Next Level is a modern web agency landing page application built for a Bordeaux-based digital agency. The application showcases the agency's services including web development, SEO, GSO (Generative Search Optimization for AI search engines), and Google Ads management. Built with a modern full-stack architecture, it features a React frontend with shadcn/ui components, an Express backend, and PostgreSQL database support via Drizzle ORM.
+Next Level is a professional web agency landing page application built for a Bordeaux-based digital agency. Redesigned to match the clean, professional style of beyonds.fr, the application showcases the agency's expertise in web development, SEO, GSO (Generative Search Optimization for AI search engines), Google Ads, site maintenance, and redesign services. Built with a modern full-stack architecture, it features a React frontend with shadcn/ui components, an Express backend, and PostgreSQL database support via Drizzle ORM.
+
+**Recent Changes (October 2025):**
+- Complete redesign to match beyonds.fr professional style
+- Simplified color palette: clean white background with primary blue (hsl(220, 90%, 56%))
+- Removed flashy gradients in favor of subtle, professional design
+- Reduced border radius from 1rem to 0.5rem for business-like appearance
+- Added client logos showcase, stats section, projects portfolio
+- Enhanced navigation and CTAs following beyonds.fr patterns
 
 ## User Preferences
 
@@ -27,7 +35,23 @@ Preferred communication style: Simple, everyday language.
 - Custom hooks for scroll animations and mobile detection
 - Responsive design with mobile-first approach
 - French language interface (targeting French market in Bordeaux)
-- Gradient-based design system with primary (blue) and secondary (purple) brand colors
+- Clean, professional design inspired by beyonds.fr with minimal gradients
+- Simple color palette: white background, primary blue (hsl(220, 90%, 56%)), neutral grays
+- Subtle animations and hover effects for professional look
+
+**Site Structure:**
+- Hero: "Agence web à Bordeaux" with 2 CTAs (Contact + RDV)
+- Client logos carousel (Carrefour, Veja, Sunday, Cofidis, etc.)
+- Agency intro section with brief description
+- Expertises: 6 services with icons (Création sites, SEO, GSO, Google Ads, Refonte, Maintenance)
+- Stats: 50+ projects, 5 years experience, 8 experts, 4.9/5 Google rating
+- Agency section with image placeholder and description
+- Technologies: WordPress, Shopify, React, Next.js
+- GSO section: 5 LLM logos (ChatGPT, Claude, Perplexity, Gemini, DeepSeek)
+- Projects portfolio: 3 sample projects with cards
+- Strong CTA: "Vous avez un projet web? 🚀"
+- Contact form with validation
+- Professional dark footer with links and contact info
 
 **Directory Structure:**
 ```
