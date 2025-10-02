@@ -617,7 +617,7 @@ export default function Home() {
                         <FormLabel>Nom complet</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Jean Dupont"
+                            placeholder="Tony Stark"
                             {...field}
                             data-testid="input-name"
                           />
@@ -636,7 +636,7 @@ export default function Home() {
                         <FormControl>
                           <Input
                             type="email"
-                            placeholder="jean@entreprise.fr"
+                            placeholder="Tony@starkindustries.com"
                             {...field}
                             data-testid="input-email"
                           />
@@ -708,7 +708,7 @@ export default function Home() {
                       <FormLabel>Parlez-nous de votre projet</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Quel est votre objectif principal ? Où en êtes-vous aujourd'hui ? Qu'est-ce qui vous empêche d'avancer ?"
+                          placeholder="Quel est votre objectif principal ? Où en êtes-vous aujourd'hui ?"
                           rows={5}
                           {...field}
                           data-testid="textarea-message"
