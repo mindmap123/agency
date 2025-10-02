@@ -191,10 +191,10 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-28">
+          <div className="flex items-center justify-between h-36">
             <div className="flex-shrink-0">
               <a href="/" className="block" data-testid="logo-link">
-                <Logo className="h-20 w-auto" />
+                <Logo className="h-32 w-auto" />
               </a>
             </div>
 
