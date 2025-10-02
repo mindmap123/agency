@@ -347,46 +347,82 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Axé Performance Section */}
-      <section id="performance" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="max-w-4xl mx-auto">
+      {/* Acquisition Section */}
+      <section id="acquisition" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 fade-in">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-4">
-              Axé performance
+            <h2 className="text-3xl sm:text-5xl font-bold mb-6">
+              SEO, GSO et Acquisition Digitale : <br />
+              Dominez tous les moteurs de recherche
             </h2>
-            <p className="text-xl sm:text-2xl text-muted-foreground">
-              4 leviers pour dominer votre marché
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto">
+              Pendant que vos concurrents se concentrent uniquement sur Google, vous captez le trafic sur tous les fronts : moteurs classiques ET intelligences artificielles. Stratégie complète, résultats mesurables.
             </p>
           </div>
 
-          <div className="space-y-10">
-            <div className="fade-in">
-              <h3 className="text-2xl font-bold mb-3 text-foreground">Sites web qui convertissent</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Pas de sites "vitrines". On construit des machines à vendre. Design orienté conversion, parcours optimisé, call-to-action qui poussent à l'action. Votre site doit générer du chiffre, pas juste exister.
-              </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 fade-in">
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all group">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <Search className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">SEO - Référencement naturel Google</h3>
+              <p className="text-muted-foreground">Positionnement durable sur les requêtes stratégiques</p>
             </div>
 
-            <div className="fade-in">
-              <h3 className="text-2xl font-bold mb-3 text-foreground">SEO & GSO : Dominez Google ET les IA</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Vos concurrents se battent pour Google. Vous, vous êtes déjà dans ChatGPT, Claude et Perplexity. On capte le trafic d'aujourd'hui et de demain.
-              </p>
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all group">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <Bot className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">GSO - Optimisation pour moteurs IA</h3>
+              <p className="text-muted-foreground">Visibilité sur ChatGPT, Claude, Perplexity, Gemini, DeepSeek, Grok</p>
             </div>
 
-            <div className="fade-in">
-              <h3 className="text-2xl font-bold mb-3 text-foreground">Google Ads qui performe</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Votre pub Google doit être un investissement, pas une dépense. On cible les bonnes personnes, au bon moment, avec le bon message. Résultat : des leads qualifiés qui arrivent en continu pendant que vous gérez votre business. C'est ça, la pub intelligente.
-              </p>
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all group">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <Zap className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">Optimisation technique & hébergement</h3>
+              <p className="text-muted-foreground">Performance, sécurité et vitesse de chargement</p>
             </div>
 
-            <div className="fade-in">
-              <h3 className="text-2xl font-bold mb-3 text-foreground">Maintenance & hébergement</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Monitoring 24/7, mises à jour auto, sauvegardes quotidiennes. Votre site ne tombe jamais. Vous dormez tranquille, on gère.
-              </p>
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all group">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <FileText className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">Rédaction de contenu SEO/GSO</h3>
+              <p className="text-muted-foreground">Contenus optimisés pour humains et intelligences artificielles</p>
             </div>
+
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all group">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <Megaphone className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">SEA - Campagnes Google Ads</h3>
+              <p className="text-muted-foreground">Acquisition payante ciblée et rentable</p>
+            </div>
+
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all group">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <RefreshCw className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">Marketing automation</h3>
+              <p className="text-muted-foreground">Nurturing et conversion automatisés</p>
+            </div>
+
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all group lg:col-span-3 md:col-span-2">
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <TrendingUp className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">Growth hacking</h3>
+              <p className="text-muted-foreground">Stratégies innovantes pour une croissance accélérée</p>
+            </div>
+          </div>
+
+          <div className="text-center fade-in max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold mb-4 text-foreground">Pourquoi notre approche fonctionne</h3>
+            <p className="text-lg text-muted-foreground">
+              Nous combinons les techniques éprouvées du SEO traditionnel avec les innovations du GSO. Stratégies data-driven, growth hacking, optimisation technique : nous activons tous les leviers pour maximiser votre ROI selon votre secteur et vos objectifs.
+            </p>
           </div>
         </div>
       </section>
