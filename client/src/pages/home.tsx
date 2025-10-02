@@ -469,44 +469,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="realisations" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 fade-in">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Nos <span className="accent-text">projets</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="bg-card rounded-lg border border-border overflow-hidden hover:shadow-lg transition-shadow fade-in"
-              >
-                <div className="bg-muted aspect-video flex items-center justify-center">
-                  <Monitor className="w-12 h-12 text-muted-foreground" />
-                </div>
-                <div className="p-6">
-                  <span className="text-xs font-semibold text-primary uppercase tracking-wide">
-                    {project.tag}
-                  </span>
-                  <h3 className="text-xl font-bold mt-2 mb-3">{project.title}</h3>
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
-                  <a
-                    href="#contact"
-                    className="inline-flex items-center gap-2 text-primary font-semibold hover:underline group"
-                  >
-                    Voir le projet 
-                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center fade-in">
