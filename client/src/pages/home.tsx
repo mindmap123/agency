@@ -238,7 +238,7 @@ export default function Home() {
         </div>
         
         {/* Subtle overlay for content readability */}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/70 via-transparent to-background/70" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/30 via-transparent to-background/30" />
 
         <div className="max-w-7xl mx-auto relative">
           <div className="max-w-4xl mx-auto text-center fade-in">
