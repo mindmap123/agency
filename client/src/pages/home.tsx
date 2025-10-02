@@ -223,7 +223,7 @@ export default function Home() {
             </h1>
 
             <p className="text-xl sm:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto">
-              Ici, pas de blabla marketing. Juste une obsession : <strong className="text-foreground font-semibold">faire grimper vos ventes</strong>.
+              On ne fait pas du marketing. <strong className="text-foreground font-semibold">On génère des résultats.</strong>
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
