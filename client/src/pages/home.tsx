@@ -504,85 +504,64 @@ export default function Home() {
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-1">
-                  Qu'est-ce qu'une agence web à Bordeaux ?
+                  Quelle est la différence entre SEO et GSO ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Une agence web à Bordeaux est une entreprise spécialisée dans la création et l'optimisation de la présence digitale des entreprises. Next Level accompagne les professionnels bordelais dans leur transformation numérique en proposant des solutions sur mesure : sites internet performants, référencement SEO et GSO, et publicité digitale.
+                  Le SEO (Search Engine Optimization) optimise votre visibilité sur les moteurs de recherche traditionnels comme Google. Le GSO (Generative Search Optimization) vous positionne dans les réponses des intelligences artificielles comme ChatGPT, Claude, Perplexity, Gemini et DeepSeek. Aujourd'hui, vos clients ne cherchent plus seulement sur Google : ils posent leurs questions directement aux IA. Next Level maîtrise les deux pour vous garantir une visibilité maximale.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-2">
                 <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-2">
-                  Quels services propose une agence web à Bordeaux ?
+                  Pourquoi devrais-je investir dans le GSO maintenant ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Création de sites internet modernes et responsive</li>
-                    <li>Référencement naturel SEO pour Google</li>
-                    <li>GSO (Generative Search Optimization) pour les moteurs IA (ChatGPT, Claude, Perplexity, Gemini, DeepSeek)</li>
-                    <li>Publicité Google Ads et campagnes digitales</li>
-                    <li>Maintenance et hébergement de sites web</li>
-                    <li>Refonte de sites existants</li>
-                  </ul>
+                  Parce que vos concurrents ne le font pas encore. Chaque jour, des millions de personnes obtiennent des recommandations d'entreprises via ChatGPT ou Claude. Si vous n'y êtes pas, vous perdez ces clients au profit de ceux qui ont anticipé. Nous sommes pionniers de cette technologie à Bordeaux et vous donnons 2-3 ans d'avance sur votre marché.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-3">
                 <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-3">
-                  Pourquoi faire appel à une agence web basée à Bordeaux ?
+                  Combien coûte un site web avec Next Level ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Proximité géographique facilitant les échanges et réunions en présentiel</li>
-                    <li>Connaissance approfondie du tissu économique bordelais et de ses spécificités</li>
-                    <li>Disponibilité et réactivité accrues grâce au même fuseau horaire</li>
-                  </ul>
+                  Un site vitrine professionnel démarre à 1 000€. Les sites e-commerce commencent à 5 000€. Nos prestations SEO/GSO sont proposées en forfaits mensuels à partir de 800€. Chaque projet est unique : nous adaptons nos solutions à vos objectifs et votre budget pour maximiser votre retour sur investissement.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-4">
                 <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-4">
-                  Combien coûte une agence web à Bordeaux ?
+                  Travaillez-vous uniquement avec des entreprises bordelaises ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Site vitrine professionnel : à partir de 1 000€</li>
-                    <li>Site e-commerce : à partir de 5 000€</li>
-                    <li>Prestations SEO/GSO : forfaits mensuels à partir de 800€/mois</li>
-                  </ul>
-                  <p className="mt-3">Les tarifs varient selon la complexité du projet, les fonctionnalités souhaitées et l'accompagnement requis.</p>
+                  Non. Bien que basés à Bordeaux, nous accompagnons des clients partout en France et à l'international. La proximité nous permet des rencontres physiques avec nos clients locaux, mais notre expertise digitale n'a pas de frontières. Nous combinons rendez-vous en présentiel et visioconférences selon vos besoins.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-5">
                 <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-5">
-                  Quelles entreprises peuvent bénéficier des services d'une agence web à Bordeaux ?
+                  Quelle est votre approche pour garantir des résultats ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>TPE et PME souhaitant développer leur présence en ligne</li>
-                    <li>Commerces et artisans bordelais cherchant à digitaliser leur activité</li>
-                    <li>Startups nécessitant un site performant et évolutif</li>
-                    <li>Grandes entreprises recherchant une expertise locale pour des projets spécifiques</li>
-                  </ul>
+                  Approche data-driven : nous suivons des KPIs précis (trafic, conversions, ROI) et optimisons en continu. Chaque stratégie est construite sur mesure selon votre secteur et vos objectifs. Nous ne vendons pas de promesses : 9 clients sur 10 nous refont confiance pour un nouveau projet parce que les résultats sont au rendez-vous.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-6">
                 <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-6">
-                  Une agence web à Bordeaux peut-elle gérer un projet à distance ?
+                  Puis-je avoir deux sites différents pour la même activité ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Absolument. Bien que basée à Bordeaux, Next Level accompagne des clients partout en France et à l'international. Nous combinons rencontres physiques pour les clients bordelais et visioconférences efficaces pour les projets à distance, garantissant le même niveau de qualité et de suivi quel que soit votre emplacement.
+                  Absolument. Avoir deux sites avec des positionnements distincts peut multiplier votre visibilité. L'essentiel est de différencier les contenus, d'utiliser des numéros de téléphone différents et de créer des identités distinctes pour éviter les problèmes de duplication avec Google. Nous accompagnons plusieurs clients dans cette stratégie multisite.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-7">
                 <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-7">
-                  Pourquoi Next Level est-elle une des meilleures agences web à Bordeaux ?
+                  Combien de temps avant de voir des résultats en SEO/GSO ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Next Level se distingue par son expertise de pointe en GSO, une technologie d'avenir que peu d'agences maîtrisent encore. Nous ne nous contentons pas de vous positionner sur Google : nous assurons votre visibilité sur les intelligences artificielles qui transforment la recherche d'information. Notre approche combine performance technique, design moderne 2025 et stratégies d'optimisation avancées pour garantir des résultats mesurables et durables. À Bordeaux, nous sommes pionniers du référencement nouvelle génération.
+                  Le SEO traditionnel montre des résultats tangibles entre 3 et 6 mois. Le GSO peut être plus rapide selon votre secteur : certains clients apparaissent dans les IA en quelques semaines. Nous fournissons des rapports mensuels détaillés pour suivre précisément votre progression et ajuster la stratégie en temps réel.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
