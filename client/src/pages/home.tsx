@@ -152,10 +152,10 @@ export default function Home() {
   ];
 
   const stats = [
-    { value: "50+", label: "projets réalisés", sublabel: "Sites vitrines et e-commerce" },
-    { value: "5", label: "années d'expérience", sublabel: "Des profils experts à chaque pôle" },
-    { value: "8", label: "profils experts", sublabel: "Pour vous accompagner à chaque étape" },
-    { value: "4,9/5", label: "note sur Google", sublabel: "Reflétant la satisfaction de nos clients" },
+    { value: "180+", label: "projets livrés", sublabel: "Des sites vitrines, e-commerce et solutions digitales qui génèrent du business." },
+    { value: "5", label: "années d'expérience", sublabel: "Une expertise forgée sur le terrain, au service de votre croissance." },
+    { value: "8", label: "profils experts", sublabel: "Développeurs, designers, stratèges marketing : une équipe complète pour vous accompagner." },
+    { value: "Partenariats", label: "durables", sublabel: "Nos clients ne restent pas pour un projet, mais pour la confiance et les résultats." },
   ];
 
   const technologies = [
@@ -326,13 +326,16 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 fade-in">
+            Nos chiffres parlent pour nous
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center fade-in">
                 <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">
                   {stat.value}
                 </div>
-                <div className="text-base font-semibold text-foreground mb-1">
+                <div className="text-base font-semibold text-foreground mb-3">
                   {stat.label}
                 </div>
                 <div className="text-sm text-muted-foreground">
