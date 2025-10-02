@@ -348,8 +348,8 @@ export default function Home() {
       </section>
 
       {/* Axé Performance Section */}
-      <section id="performance" className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section id="performance" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 fade-in">
             <h2 className="text-3xl sm:text-5xl font-bold mb-4">
               Axé performance
@@ -359,31 +359,31 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all fade-in">
-              <h3 className="text-xl font-bold mb-4 text-foreground">Sites web qui convertissent</h3>
-              <p className="text-muted-foreground leading-relaxed">
+          <div className="space-y-10">
+            <div className="fade-in">
+              <h3 className="text-2xl font-bold mb-3 text-foreground">Sites web qui convertissent</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Pas de sites "vitrines". On construit des machines à vendre. Design orienté conversion, parcours optimisé, call-to-action qui poussent à l'action. Votre site doit générer du chiffre, pas juste exister.
               </p>
             </div>
 
-            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all fade-in">
-              <h3 className="text-xl font-bold mb-4 text-foreground">SEO & GSO : Dominez Google ET les IA</h3>
-              <p className="text-muted-foreground leading-relaxed">
+            <div className="fade-in">
+              <h3 className="text-2xl font-bold mb-3 text-foreground">SEO & GSO : Dominez Google ET les IA</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Vos concurrents se battent pour Google. Vous, vous êtes déjà dans ChatGPT, Claude et Perplexity. On capte le trafic d'aujourd'hui et de demain.
               </p>
             </div>
 
-            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all fade-in">
-              <h3 className="text-xl font-bold mb-4 text-foreground">Google Ads qui performe</h3>
-              <p className="text-muted-foreground leading-relaxed">
+            <div className="fade-in">
+              <h3 className="text-2xl font-bold mb-3 text-foreground">Google Ads qui performe</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Votre pub Google doit être un investissement, pas une dépense. On cible les bonnes personnes, au bon moment, avec le bon message. Résultat : des leads qualifiés qui arrivent en continu pendant que vous gérez votre business. C'est ça, la pub intelligente.
               </p>
             </div>
 
-            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all fade-in">
-              <h3 className="text-xl font-bold mb-4 text-foreground">Maintenance & hébergement</h3>
-              <p className="text-muted-foreground leading-relaxed">
+            <div className="fade-in">
+              <h3 className="text-2xl font-bold mb-3 text-foreground">Maintenance & hébergement</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Monitoring 24/7, mises à jour auto, sauvegardes quotidiennes. Votre site ne tombe jamais. Vous dormez tranquille, on gère.
               </p>
             </div>
