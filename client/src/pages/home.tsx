@@ -215,8 +215,23 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-52 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="pt-52 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Abstract Background Elements */}
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          {/* Gradient Circles */}
+          <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-10 w-80 h-80 bg-gradient-to-tr from-primary/15 to-primary/5 rounded-full blur-3xl" />
+          
+          {/* Grid Pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
+          
+          {/* Geometric Shapes */}
+          <div className="absolute top-40 left-20 w-32 h-32 border border-primary/20 rounded-lg rotate-12" />
+          <div className="absolute bottom-32 right-32 w-24 h-24 border border-primary/20 rounded-full" />
+          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-primary/10 rotate-45" />
+        </div>
+
+        <div className="max-w-7xl mx-auto relative">
           <div className="max-w-4xl mx-auto text-center fade-in">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-foreground">
               Dominez votre marché avec Next Level
