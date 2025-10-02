@@ -12,12 +12,9 @@ import {
   MapPin,
   Mail,
   Phone,
-  Menu,
-  X,
   Code,
   ShoppingCart,
   ArrowUpRight,
-  ChevronRight,
   Search,
   Megaphone,
   Bot,
@@ -61,7 +58,6 @@ const contactFormSchema = z.object({
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { toast } = useToast();
   
   const form = useForm<ContactFormValues>({
@@ -103,7 +99,6 @@ export default function Home() {
         const element = document.getElementById(id || "");
         if (element) {
           element.scrollIntoView({ behavior: "smooth", block: "start" });
-          setMobileMenuOpen(false);
         }
       }
     };
@@ -203,7 +198,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="hidden md:flex items-center space-x-4">
+            <div className="flex items-center">
               <a
                 href="#contact"
                 className="bg-primary text-primary-foreground px-6 py-2.5 rounded-lg hover:bg-primary/90 transition-all font-medium text-sm inline-flex items-center gap-2 shadow-lg shadow-primary/25 group"
@@ -212,93 +207,8 @@ export default function Home() {
                 Prendre RDV
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2.5 rounded-lg hover:bg-primary/10 transition-colors"
-                data-testid="button-menu"
-              >
-                <Menu className="w-6 h-6 text-foreground" />
-              </button>
             </div>
-
-            <button
-              className="md:hidden p-2"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              data-testid="button-mobile-menu"
-            >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
           </div>
-
-          {mobileMenuOpen && (
-            <div className="absolute top-20 left-0 right-0 bg-background/98 backdrop-blur-xl shadow-2xl border-t border-border">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-2">
-                <a
-                  href="#expertises"
-                  className="block py-3 px-4 rounded-lg text-foreground hover:bg-primary/10 transition-all font-medium text-lg group"
-                  data-testid="link-services-mobile"
-                >
-                  <span className="flex items-center justify-between">
-                    Expertises
-                    <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-                  </span>
-                </a>
-                <a
-                  href="#gso"
-                  className="block py-3 px-4 rounded-lg text-foreground hover:bg-primary/10 transition-all font-medium text-lg group"
-                  data-testid="link-gso-mobile"
-                >
-                  <span className="flex items-center justify-between">
-                    GSO
-                    <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-                  </span>
-                </a>
-                <a
-                  href="#agence"
-                  className="block py-3 px-4 rounded-lg text-foreground hover:bg-primary/10 transition-all font-medium text-lg group"
-                  data-testid="link-advantages-mobile"
-                >
-                  <span className="flex items-center justify-between">
-                    L'agence
-                    <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-                  </span>
-                </a>
-                <a
-                  href="#realisations"
-                  className="block py-3 px-4 rounded-lg text-foreground hover:bg-primary/10 transition-all font-medium text-lg group"
-                  data-testid="link-projects-mobile"
-                >
-                  <span className="flex items-center justify-between">
-                    Réalisations
-                    <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-                  </span>
-                </a>
-                <a
-                  href="#contact"
-                  className="block py-3 px-4 rounded-lg text-foreground hover:bg-primary/10 transition-all font-medium text-lg group"
-                  data-testid="link-contact-mobile"
-                >
-                  <span className="flex items-center justify-between">
-                    Contact
-                    <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-                  </span>
-                </a>
-                <div className="pt-4 mt-4 border-t border-border">
-                  <a
-                    href="#contact"
-                    className="block bg-primary text-primary-foreground px-6 py-3.5 rounded-lg hover:bg-primary/90 transition-all font-semibold text-center shadow-lg shadow-primary/25"
-                    data-testid="link-rdv-mobile"
-                  >
-                    Prendre RDV 📅
-                  </a>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </nav>
 

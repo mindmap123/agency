@@ -5,13 +5,13 @@
 Next Level is a professional web agency landing page application built for a Bordeaux-based digital agency. Redesigned to match the clean, professional style of beyonds.fr, the application showcases the agency's expertise in web development, SEO, GSO (Generative Search Optimization for AI search engines), Google Ads, site maintenance, and redesign services. Built with a modern full-stack architecture, it features a React frontend with shadcn/ui components, an Express backend, and PostgreSQL database support via Drizzle ORM.
 
 **Recent Changes (October 2025):**
-- **Header redesign:** Transparent header with backdrop blur, minimalist desktop view showing only "Prendre RDV" button + burger menu
-- **Modern burger menu:** All navigation consolidated into burger menu with ChevronRight icons and smooth animations
+- **Landing page simplification:** Removed all navigation menus for clean, minimalist design
+- **Header redesign:** Transparent header with backdrop blur showing only logo + "Prendre RDV" button (no burger menu)
+- **SVG Logo:** Professional logo component with "Next Level" text and growth arrow using site's exact color palette (#2E7EE8 to #5E9BFF gradient)
 - **SEO/GSO/Acquisition section:** Comprehensive section with 7 expertises (SEO, GSO, technical optimization, content writing, SEA, marketing automation, growth hacking)
 - **AI engines:** Added Grok to the list (6 total: ChatGPT, Claude, Perplexity, Gemini, DeepSeek, Grok)
 - **Modern icons:** Replaced all ArrowRight with ArrowUpRight icons featuring diagonal hover animations
 - **Professional palette:** Primary blue (hsl(220, 90%, 56%)), clean white background, subtle gradients
-- Logo adapted to use primary color from site palette for visual consistency
 
 ## User Preferences
 
@@ -41,7 +41,10 @@ Preferred communication style: Simple, everyday language.
 - Subtle animations and hover effects for professional look
 
 **Site Structure:**
-- **Header:** Transparent with backdrop blur, desktop shows only "Prendre RDV" + burger menu
+- **Header:** Fixed transparent header with backdrop blur, minimalist design showing only:
+  - SVG Logo (left): "Next Level" with growth arrow in primary blue gradient
+  - "Prendre RDV" button (right): Primary color CTA with ArrowUpRight icon
+  - No navigation menu (clean landing page design)
 - **Hero:** "Agence web à Bordeaux" with strong value proposition
 - **Agency intro:** Brief description highlighting 5 years experience
 - **Expertises:** 6 services with icons (Création sites, SEO, GSO, Google Ads, Refonte, Maintenance)
