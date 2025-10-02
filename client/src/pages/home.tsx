@@ -216,19 +216,49 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="pt-52 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Abstract Background Elements */}
+        {/* Dynamic Background with Arrows */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
-          {/* Gradient Circles */}
-          <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-primary/20 to-primary/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-10 w-80 h-80 bg-gradient-to-tr from-primary/15 to-primary/5 rounded-full blur-3xl" />
+          {/* Gradient Background */}
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/15 to-transparent rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-3xl animate-float-delayed" />
           
-          {/* Grid Pattern */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#8882_1px,transparent_1px),linear-gradient(to_bottom,#8882_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
+          {/* Animated Arrows - Multiple layers for depth */}
+          <div className="absolute top-1/4 right-[15%] animate-arrow-rise-1">
+            <svg width="40" height="60" viewBox="0 0 40 60" fill="none" className="opacity-20">
+              <path d="M20 0L20 50M20 0L10 15M20 0L30 15" stroke="hsl(220, 90%, 56%)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
           
-          {/* Geometric Shapes */}
-          <div className="absolute top-40 left-20 w-32 h-32 border border-primary/20 rounded-lg rotate-12" />
-          <div className="absolute bottom-32 right-32 w-24 h-24 border border-primary/20 rounded-full" />
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-primary/10 rotate-45" />
+          <div className="absolute top-1/3 left-[20%] animate-arrow-rise-2">
+            <svg width="30" height="50" viewBox="0 0 30 50" fill="none" className="opacity-15">
+              <path d="M15 0L15 40M15 0L7 12M15 0L23 12" stroke="hsl(220, 90%, 56%)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          
+          <div className="absolute top-[40%] right-[25%] animate-arrow-rise-3">
+            <svg width="35" height="55" viewBox="0 0 35 55" fill="none" className="opacity-25">
+              <path d="M17.5 0L17.5 45M17.5 0L9 13M17.5 0L26 13" stroke="hsl(220, 90%, 56%)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          
+          <div className="absolute bottom-1/3 left-[15%] animate-arrow-rise-1">
+            <svg width="28" height="48" viewBox="0 0 28 48" fill="none" className="opacity-18">
+              <path d="M14 0L14 38M14 0L6 11M14 0L22 11" stroke="hsl(220, 90%, 56%)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          
+          <div className="absolute top-[20%] right-[40%] animate-arrow-rise-2">
+            <svg width="32" height="52" viewBox="0 0 32 52" fill="none" className="opacity-20">
+              <path d="M16 0L16 42M16 0L8 12M16 0L24 12" stroke="hsl(220, 90%, 56%)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+          
+          {/* Growth Line Chart Effect */}
+          <div className="absolute bottom-1/4 left-1/4 right-1/4 opacity-10">
+            <svg width="100%" height="100" viewBox="0 0 400 100" preserveAspectRatio="none" className="animate-draw-line">
+              <path d="M0 80 L100 60 L200 40 L300 20 L400 5" stroke="hsl(220, 90%, 56%)" strokeWidth="2" fill="none" strokeLinecap="round" strokeDasharray="1000" strokeDashoffset="1000"/>
+            </svg>
+          </div>
         </div>
 
         <div className="max-w-7xl mx-auto relative">

@@ -136,3 +136,57 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Dynamic Hero Animations */
+@keyframes arrow-rise {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateY(-60px) translateX(10px);
+    opacity: 0.3;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-arrow-rise-1 {
+  animation: arrow-rise 6s ease-in-out infinite;
+}
+
+.animate-arrow-rise-2 {
+  animation: arrow-rise 8s ease-in-out infinite 1s;
+}
+
+.animate-arrow-rise-3 {
+  animation: arrow-rise 7s ease-in-out infinite 2s;
+}
+
+.animate-float {
+  animation: float 15s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 18s ease-in-out infinite 3s;
+}
+
+.animate-draw-line {
+  animation: draw-line 3s ease-out forwards;
+}
