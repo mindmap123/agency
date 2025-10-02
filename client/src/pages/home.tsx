@@ -574,10 +574,10 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 fade-in">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Parlons de votre projet
+              Transformons votre ambition en résultats concrets
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Contactez-nous pour un audit gratuit et un devis personnalisé
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Parlez-nous de votre projet. Nous analysons votre situation actuelle, identifions les opportunités et vous proposons une stratégie digitale sur-mesure. Premier échange sous 24h, audit gratuit inclus.
             </p>
           </div>
 
@@ -612,7 +612,7 @@ export default function Home() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel>Email professionnel</FormLabel>
                         <FormControl>
                           <Input
                             type="email"
@@ -652,25 +652,26 @@ export default function Home() {
                     name="service"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Service souhaité</FormLabel>
+                        <FormLabel>Votre principal objectif</FormLabel>
                         <Select
                           onValueChange={field.onChange}
                           value={field.value}
                         >
                           <FormControl>
                             <SelectTrigger data-testid="select-service">
-                              <SelectValue placeholder="Sélectionner un service" />
+                              <SelectValue placeholder="Sélectionner un objectif" />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="website">
-                              Création de site
+                            <SelectItem value="conversion">
+                              Créer un site qui convertit
                             </SelectItem>
-                            <SelectItem value="seo">Référencement SEO</SelectItem>
-                            <SelectItem value="gso">GSO - Recherche IA</SelectItem>
-                            <SelectItem value="ads">Google Ads</SelectItem>
-                            <SelectItem value="refonte">Refonte de site</SelectItem>
-                            <SelectItem value="maintenance">Maintenance</SelectItem>
+                            <SelectItem value="seo-gso">Exploser mon trafic (SEO/GSO)</SelectItem>
+                            <SelectItem value="ia">Dominer sur les moteurs IA</SelectItem>
+                            <SelectItem value="ads">Lancer des campagnes Google Ads rentables</SelectItem>
+                            <SelectItem value="refonte">Refondre mon site existant</SelectItem>
+                            <SelectItem value="maintenance">Sécuriser maintenance et hébergement</SelectItem>
+                            <SelectItem value="strategy">Stratégie digitale globale</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -684,10 +685,10 @@ export default function Home() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>Parlez-nous de votre projet</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Décrivez votre projet..."
+                          placeholder="Quel est votre objectif principal ? Où en êtes-vous aujourd'hui ? Qu'est-ce qui vous empêche d'avancer ?"
                           rows={5}
                           {...field}
                           data-testid="textarea-message"
@@ -703,11 +704,11 @@ export default function Home() {
                   className="w-full bg-primary text-primary-foreground px-8 py-4 rounded-md text-lg font-semibold hover:bg-primary/90 transition-colors"
                   data-testid="button-submit-contact"
                 >
-                  Envoyer ma demande
+                  Accélérer mon business
                 </Button>
 
                 <p className="text-sm text-muted-foreground text-center">
-                  Réponse sous 24h • Audit gratuit • Devis personnalisé
+                  ✓ Réponse garantie sous 24h • ✓ Audit de votre situation actuelle offert • ✓ Stratégie personnalisée • ✓ Pas d'engagement
                 </p>
               </form>
             </Form>
