@@ -636,7 +636,7 @@ export default function Home() {
                         <FormControl>
                           <Input
                             type="email"
-                            placeholder="Tony@starkindustries.com"
+                            placeholder="tony@starkindustries.com"
                             {...field}
                             data-testid="input-email"
                           />
