@@ -8,7 +8,7 @@
   --card: 0 0% 98.82%;
   --card-foreground: 0 0% 0%;
   --popover: 45 25% 97%;
-  --popover-foreground: 0 0% 100%;
+  --popover-foreground: 0 0% 10.2%;
   --primary: 265.05deg 85.12% 52.55%;
   --primary-foreground: 0 0% 100%;
   --secondary: 0 0% 76.86%;
@@ -18,7 +18,7 @@
   --accent: 0 0% 100%;
   --accent-foreground: 0 0% 10.2%;
   --destructive: 0 0% 0%;
-  --destructive-foreground: 0 0% 100%;
+  --destructive-foreground: 0deg 0% 0%;
   --border: 0 0% 90.98%;
   --input: 0 0% 70.98%;
   --ring: 0 0% 41.96%;
@@ -79,11 +79,11 @@
   --sidebar-accent-foreground: 45 25% 85%;
   --sidebar-border: 20 14% 15%;
   --sidebar-ring: 9 75% 61%;
-  --chart-1: hsl(203.8863, 88.2845%, 53.1373%);
-  --chart-2: hsl(159.7826, 100%, 36.0784%);
-  --chart-3: hsl(42.0290, 92.8251%, 56.2745%);
-  --chart-4: hsl(147.1429, 78.5047%, 41.9608%);
-  --chart-5: hsl(341.4894, 75.2000%, 50.9804%);
+  --chart-1: hsl(203.8863 88.2845% 53.1373%);
+  --chart-2: hsl(159.7826 100% 36.0784%);
+  --chart-3: hsl(42.0290 92.8251% 56.2745%);
+  --chart-4: hsl(147.1429 78.5047% 41.9608%);
+  --chart-5: hsl(341.4894 75.2000% 50.9804%);
 }
 
 @layer base {
