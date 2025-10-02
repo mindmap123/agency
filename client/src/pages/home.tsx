@@ -594,7 +594,8 @@ export default function Home() {
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Parlez-nous de votre projet.<br />
               Nous analysons votre situation actuelle, identifions les opportunités<br />
-              et vous proposons une stratégie digitale sur-mesure.<br />
+              et vous proposons une<br />
+              stratégie digitale sur-mesure.<br />
               Premier échange sous 24h,<br />
               audit gratuit inclus.
             </p>
