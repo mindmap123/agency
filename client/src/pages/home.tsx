@@ -1,8 +1,7 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { gsap } from "gsap";
 import Logo from "@/components/Logo";
 import { 
   Monitor, 
@@ -60,7 +59,6 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function Home() {
   const { toast } = useToast();
-  const stripesRef = useRef<HTMLDivElement>(null);
   
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -107,18 +105,6 @@ export default function Home() {
 
     document.addEventListener("click", handleAnchorClick);
     return () => document.removeEventListener("click", handleAnchorClick);
-  }, []);
-
-  // GSAP animation for rising diagonal stripes
-  useEffect(() => {
-    if (stripesRef.current) {
-      gsap.to(stripesRef.current, {
-        backgroundPosition: "0 -200%",
-        duration: 12,
-        ease: "none",
-        repeat: -1,
-      });
-    }
   }, []);
 
   const onSubmit = async (data: ContactFormValues) => {
@@ -230,25 +216,29 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="pt-52 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Rising Diagonal Stripes Background */}
-        <div 
-          ref={stripesRef}
-          className="absolute inset-0 -z-10 overflow-hidden rising-stripes-bg"
-          style={{
-            background: `repeating-linear-gradient(
-              45deg,
-              #8B5CF6 0px,
-              #8B5CF6 60px,
-              #3B9FFF 60px,
-              #3B9FFF 120px
-            )`,
-            backgroundSize: '100% 200%',
-            backgroundPosition: '0 0'
-          }}
-        />
+        {/* Fluid Gradient Background */}
+        <div className="absolute inset-0 -z-10 overflow-hidden gradient-bg">
+          <svg xmlns="http://www.w3.org/2000/svg" className="hidden">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+              </filter>
+            </defs>
+          </svg>
+          
+          <div className="gradients-container">
+            <div className="g1"></div>
+            <div className="g2"></div>
+            <div className="g3"></div>
+            <div className="g4"></div>
+            <div className="g5"></div>
+          </div>
+        </div>
         
         {/* Subtle overlay for content readability */}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/80 via-background/60 to-background/80" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/70 via-transparent to-background/70" />
 
         <div className="max-w-7xl mx-auto relative">
           <div className="max-w-4xl mx-auto text-center fade-in">
