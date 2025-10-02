@@ -452,16 +452,25 @@ export default function Home() {
               Google c'est hier. Les IA, c'est maintenant. On vous y met.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
-              {["ChatGPT", "Claude", "Perplexity", "Gemini", "DeepSeek", "Grok"].map((llm, index) => (
+              {[
+                { name: "ChatGPT", bg: "from-emerald-500/20 to-teal-500/20", icon: "bg-gradient-to-br from-emerald-500 to-teal-600" },
+                { name: "Claude", bg: "from-amber-500/20 to-orange-500/20", icon: "bg-gradient-to-br from-amber-500 to-orange-600" },
+                { name: "Perplexity", bg: "from-blue-500/20 to-cyan-500/20", icon: "bg-gradient-to-br from-blue-500 to-cyan-600" },
+                { name: "Gemini", bg: "from-purple-500/20 to-pink-500/20", icon: "bg-gradient-to-br from-purple-500 to-pink-600" },
+                { name: "DeepSeek", bg: "from-indigo-500/20 to-blue-500/20", icon: "bg-gradient-to-br from-indigo-500 to-blue-600" },
+                { name: "Grok", bg: "from-slate-500/20 to-gray-500/20", icon: "bg-gradient-to-br from-slate-500 to-gray-600" },
+              ].map((llm, index) => (
                 <div
                   key={index}
-                  className="bg-card p-4 rounded-lg border border-border text-center hover:shadow-lg transition-shadow"
+                  className="group bg-card p-4 rounded-lg border border-border text-center hover:shadow-xl hover:scale-105 transition-all duration-300"
                   data-testid={`llm-${index}`}
                 >
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                    <Sparkles className="w-5 h-5 text-primary" />
+                  <div className={`w-12 h-12 bg-gradient-to-br ${llm.bg} rounded-xl mx-auto mb-2 flex items-center justify-center group-hover:rotate-6 transition-transform duration-300`}>
+                    <div className={`w-6 h-6 ${llm.icon} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                      <Sparkles className="w-4 h-4 text-white" />
+                    </div>
                   </div>
-                  <span className="font-semibold text-xs">{llm}</span>
+                  <span className="font-semibold text-xs">{llm.name}</span>
                 </div>
               ))}
             </div>
