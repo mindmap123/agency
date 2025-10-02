@@ -593,8 +593,10 @@ export default function Home() {
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Parlez-nous de votre projet.<br />
-              Nous analysons votre situation actuelle, identifions les opportunités et vous proposons une stratégie digitale sur-mesure.<br />
-              Premier échange sous 24h, audit gratuit inclus.
+              Nous analysons votre situation actuelle, identifions les opportunités<br />
+              et vous proposons une stratégie digitale sur-mesure.<br />
+              Premier échange sous 24h,<br />
+              audit gratuit inclus.
             </p>
           </div>
 
