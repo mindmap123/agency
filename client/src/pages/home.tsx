@@ -272,6 +272,9 @@ export default function Home() {
       <section id="expertises" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 fade-in max-w-4xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-8">
+              Découvrez nos expertises
+            </h2>
             <p className="text-xl sm:text-2xl text-foreground font-semibold mb-4">
               Votre objectif : attirer plus de clients, vendre plus, et prendre une longueur d'avance.
             </p>
