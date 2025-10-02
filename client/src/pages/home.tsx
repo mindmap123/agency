@@ -347,45 +347,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Agency Section with Image Placeholder */}
-      <section id="agence" className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Axé Performance Section */}
+      <section id="performance" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="fade-in">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-                Next Level, votre <span className="accent-text">agence web</span> à Bordeaux
-              </h2>
-              <h3 className="text-xl font-bold mb-4 text-foreground">
-                Découvrez l'ensemble de nos expertises digitales
-              </h3>
-              <p className="text-lg text-muted-foreground mb-6">
-                Que votre objectif soit de créer un site innovant, de lancer une boutique en ligne, d'améliorer votre marketing digital ou votre référencement, nous sommes à vos côtés. Nous vous proposons des solutions efficaces et pérennes qui répondent à vos besoins.
+          <div className="text-center mb-16 fade-in">
+            <h2 className="text-3xl sm:text-5xl font-bold mb-4">
+              Axé performance
+            </h2>
+            <p className="text-xl sm:text-2xl text-muted-foreground">
+              4 leviers pour dominer votre marché
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all fade-in">
+              <h3 className="text-xl font-bold mb-4 text-foreground">Sites web qui convertissent</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Pas de sites "vitrines". On construit des machines à vendre. Design orienté conversion, parcours optimisé, call-to-action qui poussent à l'action. Votre site doit générer du chiffre, pas juste exister.
               </p>
-              <h3 className="text-xl font-bold mb-4 text-foreground">
-                SEO & GSO : Dominez les moteurs de recherche traditionnels et IA
-              </h3>
-              <p className="text-lg text-muted-foreground mb-6">
-                Au-delà du référencement Google classique, nous optimisons votre présence sur les moteurs de recherche nouvelle génération. Grâce à notre expertise en <strong>GSO (Generative Search Optimization)</strong>, votre entreprise apparaît dans les réponses de ChatGPT, Claude, Perplexity, Gemini et DeepSeek. Cette visibilité sur les intelligences artificielles est devenue aussi cruciale que le SEO traditionnel pour capter vos futurs clients.
-              </p>
-              <p className="text-lg text-muted-foreground mb-8">
-                De plus, nous gérons vos projets de refonte, nous nous chargeons de la maintenance et de l'hébergement de vos sites, élaborons des stratégies SEO et GSO complètes, et optimisons vos campagnes Google Ads pour maximiser votre retour sur investissement et renforcer durablement votre présence en ligne.
-              </p>
-              <a
-                href="#realisations"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:bg-primary/90 transition-colors group"
-              >
-                Nos réalisations 
-                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </a>
             </div>
 
-            <div className="fade-in">
-              <div className="bg-muted rounded-lg overflow-hidden aspect-[4/3] flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Monitor className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-                  <p className="text-muted-foreground">Photo de l'équipe Next Level</p>
-                </div>
-              </div>
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all fade-in">
+              <h3 className="text-xl font-bold mb-4 text-foreground">SEO & GSO : Dominez Google ET les IA</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Vos concurrents se battent pour Google. Vous, vous êtes déjà dans ChatGPT, Claude et Perplexity. On capte le trafic d'aujourd'hui et de demain.
+              </p>
+            </div>
+
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all fade-in">
+              <h3 className="text-xl font-bold mb-4 text-foreground">Google Ads qui performe</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Votre pub Google doit être un investissement, pas une dépense. On cible les bonnes personnes, au bon moment, avec le bon message. Résultat : des leads qualifiés qui arrivent en continu pendant que vous gérez votre business. C'est ça, la pub intelligente.
+              </p>
+            </div>
+
+            <div className="bg-card p-8 rounded-xl border border-border hover:shadow-xl transition-all fade-in">
+              <h3 className="text-xl font-bold mb-4 text-foreground">Maintenance & hébergement</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Monitoring 24/7, mises à jour auto, sauvegardes quotidiennes. Votre site ne tombe jamais. Vous dormez tranquille, on gère.
+              </p>
             </div>
           </div>
         </div>
