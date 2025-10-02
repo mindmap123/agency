@@ -806,14 +806,16 @@ export default function Home() {
                     contact@nextlevel-web.fr
                   </a>
                 </li>
-                <li className="flex items-start gap-2">
-                  <Phone className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                <li>
                   <a
-                    href="tel:+33612345678"
-                    className="hover:text-secondary-foreground transition-colors"
-                    data-testid="link-footer-phone"
+                    href="https://cal.com/nextlevelagency"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-md font-semibold hover:bg-primary/90 transition-colors"
+                    data-testid="link-footer-booking"
                   >
-                    +33 6 12 34 56 78
+                    Prendre RDV
+                    <ArrowUpRight className="w-5 h-5" />
                   </a>
                 </li>
               </ul>
