@@ -155,7 +155,7 @@ export default function Home() {
     { value: "180+", label: "Projets Livrés", sublabel: "Des sites vitrines, e-commerce et solutions digitales qui génèrent du business." },
     { value: "5", label: "Années d'Expérience", sublabel: "Une expertise forgée sur le terrain, au service de votre croissance." },
     { value: "8", label: "Profils Experts", sublabel: "Développeurs, designers, stratèges marketing : une équipe complète pour vous accompagner." },
-    { value: "90%", label: "De Nos Clients Restent Avec Nous", sublabel: "après leur premier site" },
+    { value: "9/10", label: "Nos clients reviennent. Encore et encore.", sublabel: "La confiance, ça ne se décrète pas, ça se prouve." },
   ];
 
   const technologies = [
