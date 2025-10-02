@@ -249,13 +249,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center fade-in">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              L'agence web <span className="accent-text">Next Level</span>
+              L'agence web Next Level
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Avec près de 5 ans d'expérience, Next Level est reconnue pour son <strong>expertise en développement</strong> de solutions digitales sur-mesure.
+              Depuis près de 5 ans, Next Level accompagne les entreprises dans leur croissance digitale en créant des solutions sur-mesure, performantes et pensées pour générer des résultats concrets.
             </p>
             <p className="text-lg text-muted-foreground mb-8">
-              Grâce à notre expertise et notre réactivité, nous avons établi une relation de confiance durable avec l'ensemble de nos clients.
+              Notre réactivité et notre approche orientée business nous ont permis de bâtir des partenariats solides et durables avec nos clients, bien au-delà d'une simple relation prestataire.
             </p>
             <a
               href="#realisations"
