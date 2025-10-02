@@ -527,8 +527,9 @@ export default function Home() {
           </div>
 
           <div className="text-center fade-in">
-            <p className="text-xl font-semibold text-foreground mb-6">
-              Nous transformons votre présence en ligne en machine d'acquisition performante et mesurable.
+            <h3 className="text-2xl font-bold mb-3 text-foreground">Problème/Solution</h3>
+            <p className="text-xl text-muted-foreground mb-6">
+              Google c'est hier. Les IA, c'est maintenant. On vous y met.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
               {["ChatGPT", "Claude", "Perplexity", "Gemini", "DeepSeek", "Grok"].map((llm, index) => (
