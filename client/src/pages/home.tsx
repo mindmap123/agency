@@ -752,6 +752,15 @@ export default function Home() {
               <ul className="space-y-3">
                 <li>
                   <a
+                    href="#"
+                    className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
+                    data-testid="link-footer-home"
+                  >
+                    Accueil
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="#expertises"
                     className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
                     data-testid="link-footer-services"
@@ -766,15 +775,6 @@ export default function Home() {
                     data-testid="link-footer-gso"
                   >
                     GSO
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#realisations"
-                    className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
-                    data-testid="link-footer-advantages"
-                  >
-                    Réalisations
                   </a>
                 </li>
                 <li>
