@@ -592,7 +592,8 @@ export default function Home() {
               Transformons votre ambition en résultats concrets
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Parlez-nous de votre projet. Nous analysons votre situation actuelle, identifions les opportunités et vous proposons une stratégie digitale sur-mesure. Premier échange sous 24h, audit gratuit inclus.
+              Parlez-nous de votre projet.<br />
+              Nous analysons votre situation actuelle, identifions les opportunités et vous proposons une stratégie digitale sur-mesure. Premier échange sous 24h, audit gratuit inclus.
             </p>
           </div>
 
