@@ -472,17 +472,18 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center fade-in">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Vous avez un projet <span className="accent-text">web</span> ? 🚀
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+            Un projet qui mérite le niveau supérieur ?
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Contactez-nous via notre formulaire de contact, nous reviendrons vers vous dans <strong>un délai de 24h.</strong>
+          <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
+            Racontez-nous votre ambition. Nous vous proposons une stratégie sur-mesure pour transformer votre présence digitale en machine à résultats. Premier échange sous 24h.
           </p>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md text-lg font-semibold hover:bg-primary/90 transition-colors"
+            data-testid="button-cta-project"
           >
-            Demander un devis
+            Discutons de votre projet
           </a>
         </div>
       </section>
