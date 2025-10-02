@@ -377,7 +377,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 fade-in">
             <h2 className="text-3xl sm:text-5xl font-bold mb-6">
-              <span className="accent-text">SEO, GSO et Acquisition Digitale</span> : <br />
+              <span className="accent-text">SEO, GSO et Acquisition Digitale</span> <br />
               Propulsez votre visibilité en ligne
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto mb-6">
