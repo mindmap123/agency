@@ -492,7 +492,9 @@ export default function Home() {
             Racontez-nous votre ambition. Nous vous proposons une stratégie sur-mesure pour transformer votre présence digitale en machine à résultats. Premier échange sous 24h.
           </p>
           <a
-            href="#contact"
+            href="https://cal.com/nextlevelagency"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-md text-lg font-semibold hover:bg-primary/90 transition-colors"
             data-testid="button-cta-project"
           >
