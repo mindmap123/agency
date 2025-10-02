@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { gsap } from "gsap";
 import Logo from "@/components/Logo";
 import { 
   Monitor, 
@@ -59,6 +60,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function Home() {
   const { toast } = useToast();
+  const stripesRef = useRef<HTMLDivElement>(null);
   
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -105,6 +107,18 @@ export default function Home() {
 
     document.addEventListener("click", handleAnchorClick);
     return () => document.removeEventListener("click", handleAnchorClick);
+  }, []);
+
+  // GSAP animation for rising diagonal stripes
+  useEffect(() => {
+    if (stripesRef.current) {
+      gsap.to(stripesRef.current, {
+        backgroundPosition: "0 -200%",
+        duration: 12,
+        ease: "none",
+        repeat: -1,
+      });
+    }
   }, []);
 
   const onSubmit = async (data: ContactFormValues) => {
@@ -216,50 +230,25 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="pt-52 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Dynamic Background with Arrows */}
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          {/* Gradient Background */}
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/15 to-transparent rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-3xl animate-float-delayed" />
-          
-          {/* Animated Arrows - Multiple layers for depth */}
-          <div className="absolute top-1/4 right-[15%] animate-arrow-rise-1">
-            <svg width="40" height="60" viewBox="0 0 40 60" fill="none" className="opacity-20">
-              <path d="M20 0L20 50M20 0L10 15M20 0L30 15" stroke="hsl(220, 90%, 56%)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-          
-          <div className="absolute top-1/3 left-[20%] animate-arrow-rise-2">
-            <svg width="30" height="50" viewBox="0 0 30 50" fill="none" className="opacity-15">
-              <path d="M15 0L15 40M15 0L7 12M15 0L23 12" stroke="hsl(220, 90%, 56%)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-          
-          <div className="absolute top-[40%] right-[25%] animate-arrow-rise-3">
-            <svg width="35" height="55" viewBox="0 0 35 55" fill="none" className="opacity-25">
-              <path d="M17.5 0L17.5 45M17.5 0L9 13M17.5 0L26 13" stroke="hsl(220, 90%, 56%)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-          
-          <div className="absolute bottom-1/3 left-[15%] animate-arrow-rise-1">
-            <svg width="28" height="48" viewBox="0 0 28 48" fill="none" className="opacity-18">
-              <path d="M14 0L14 38M14 0L6 11M14 0L22 11" stroke="hsl(220, 90%, 56%)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-          
-          <div className="absolute top-[20%] right-[40%] animate-arrow-rise-2">
-            <svg width="32" height="52" viewBox="0 0 32 52" fill="none" className="opacity-20">
-              <path d="M16 0L16 42M16 0L8 12M16 0L24 12" stroke="hsl(220, 90%, 56%)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-          
-          {/* Growth Line Chart Effect */}
-          <div className="absolute bottom-1/4 left-1/4 right-1/4 opacity-10">
-            <svg width="100%" height="100" viewBox="0 0 400 100" preserveAspectRatio="none" className="animate-draw-line">
-              <path d="M0 80 L100 60 L200 40 L300 20 L400 5" stroke="hsl(220, 90%, 56%)" strokeWidth="2" fill="none" strokeLinecap="round" strokeDasharray="1000" strokeDashoffset="1000"/>
-            </svg>
-          </div>
-        </div>
+        {/* Rising Diagonal Stripes Background */}
+        <div 
+          ref={stripesRef}
+          className="absolute inset-0 -z-10 overflow-hidden rising-stripes-bg"
+          style={{
+            background: `repeating-linear-gradient(
+              45deg,
+              #8B5CF6 0px,
+              #8B5CF6 60px,
+              #3B9FFF 60px,
+              #3B9FFF 120px
+            )`,
+            backgroundSize: '100% 200%',
+            backgroundPosition: '0 0'
+          }}
+        />
+        
+        {/* Subtle overlay for content readability */}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/80 via-background/60 to-background/80" />
 
         <div className="max-w-7xl mx-auto relative">
           <div className="max-w-4xl mx-auto text-center fade-in">
