@@ -596,8 +596,8 @@ export default function Home() {
               Nous analysons votre situation actuelle, identifions les opportunités<br />
               et vous proposons une<br />
               stratégie digitale sur-mesure.<br />
-              Premier échange sous 24h,<br />
-              audit gratuit inclus.
+              Premier échange sous 24h.<br />
+              Audit gratuit inclus.
             </p>
           </div>
 
