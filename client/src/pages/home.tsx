@@ -271,39 +271,51 @@ export default function Home() {
       {/* Expertises Section */}
       <section id="expertises" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 fade-in">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Découvrez l'ensemble de nos <span className="accent-text">expertises</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-              Que votre objectif soit de créer un site innovant, de lancer une boutique en ligne, d'améliorer votre marketing digital ou votre SEO, nous sommes à vos côtés. Nous vous proposons des solutions efficaces et pérennes qui répondent à vos besoins.
+          <div className="text-center mb-16 fade-in max-w-4xl mx-auto">
+            <p className="text-xl sm:text-2xl text-foreground font-semibold mb-4">
+              Votre objectif : attirer plus de clients, vendre plus, et prendre une longueur d'avance.
+            </p>
+            <p className="text-xl sm:text-2xl text-muted-foreground">
+              Notre mission : transformer vos idées en solutions digitales performantes, concrètes et durables.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {expertises.map((expertise, index) => (
-              <div
-                key={index}
-                className="bg-card p-8 rounded-lg border border-border hover:shadow-lg transition-shadow fade-in"
-                data-testid={`card-service-${index}`}
-              >
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <expertise.icon className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">{expertise.title}</h3>
-                <p className="text-muted-foreground">{expertise.description}</p>
-              </div>
-            ))}
-          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-card p-8 rounded-lg border border-border hover:shadow-lg transition-shadow fade-in" data-testid="card-service-0">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-bold mb-3">Création de site internet</h3>
+              <p className="text-muted-foreground">Des sites modernes, rapides et pensés pour convertir vos visiteurs en clients.</p>
+            </div>
 
-          <div className="text-center fade-in">
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 text-primary font-semibold hover:underline group"
-            >
-              Nos expertises 
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
+            <div className="bg-card p-8 rounded-lg border border-border hover:shadow-lg transition-shadow fade-in" data-testid="card-service-1">
+              <div className="text-4xl mb-4">🔍</div>
+              <h3 className="text-xl font-bold mb-3">SEO & Référencement</h3>
+              <p className="text-muted-foreground">Des stratégies SEO taillées pour vous faire remonter dans Google et capter un trafic qualifié.</p>
+            </div>
+
+            <div className="bg-card p-8 rounded-lg border border-border hover:shadow-lg transition-shadow fade-in" data-testid="card-service-2">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-xl font-bold mb-3">GSO – Recherche IA</h3>
+              <p className="text-muted-foreground">Soyez visibles là où vos prospects posent déjà leurs questions : ChatGPT, Claude, Perplexity, Gemini.</p>
+            </div>
+
+            <div className="bg-card p-8 rounded-lg border border-border hover:shadow-lg transition-shadow fade-in" data-testid="card-service-3">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold mb-3">Google Ads</h3>
+              <p className="text-muted-foreground">Des campagnes ciblées, optimisées et rentables pour booster vos ventes rapidement.</p>
+            </div>
+
+            <div className="bg-card p-8 rounded-lg border border-border hover:shadow-lg transition-shadow fade-in" data-testid="card-service-4">
+              <div className="text-4xl mb-4">♻️</div>
+              <h3 className="text-xl font-bold mb-3">Refonte de site internet</h3>
+              <p className="text-muted-foreground">On ne se contente pas d'un « lifting » : on repense votre site pour en faire un véritable levier de performance.</p>
+            </div>
+
+            <div className="bg-card p-8 rounded-lg border border-border hover:shadow-lg transition-shadow fade-in" data-testid="card-service-5">
+              <div className="text-4xl mb-4">🛠️</div>
+              <h3 className="text-xl font-bold mb-3">Maintenance de site internet</h3>
+              <p className="text-muted-foreground">Sécurité, mises à jour, support : votre site reste toujours en pleine forme, sans mauvaise surprise.</p>
+            </div>
           </div>
         </div>
       </section>
