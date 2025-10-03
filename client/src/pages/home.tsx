@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { cn } from "@/lib/utils";
 import Logo from "@/components/Logo";
 import { 
   Monitor, 
@@ -639,6 +640,9 @@ export default function Home() {
                           <Input
                             placeholder="Tony Stark"
                             {...field}
+                            className={cn(
+                              form.formState.errors.name && "border-red-500 focus-visible:ring-red-500"
+                            )}
                             data-testid="input-name"
                           />
                         </FormControl>
@@ -658,6 +662,9 @@ export default function Home() {
                             type="email"
                             placeholder="tony@starkindustries.com"
                             {...field}
+                            className={cn(
+                              form.formState.errors.email && "border-red-500 focus-visible:ring-red-500"
+                            )}
                             data-testid="input-email"
                           />
                         </FormControl>
@@ -679,6 +686,9 @@ export default function Home() {
                             type="tel"
                             placeholder="+33 6 12 34 56 78"
                             {...field}
+                            className={cn(
+                              form.formState.errors.phone && "border-red-500 focus-visible:ring-red-500"
+                            )}
                             data-testid="input-phone"
                           />
                         </FormControl>
@@ -698,7 +708,12 @@ export default function Home() {
                           value={field.value}
                         >
                           <FormControl>
-                            <SelectTrigger data-testid="select-service">
+                            <SelectTrigger 
+                              data-testid="select-service"
+                              className={cn(
+                                form.formState.errors.service && "border-red-500 focus:ring-red-500"
+                              )}
+                            >
                               <SelectValue placeholder="Sélectionner un objectif" />
                             </SelectTrigger>
                           </FormControl>
@@ -731,6 +746,9 @@ export default function Home() {
                           placeholder="Quel est votre objectif principal ? Où en êtes-vous aujourd'hui ?"
                           rows={5}
                           {...field}
+                          className={cn(
+                            form.formState.errors.message && "border-red-500 focus-visible:ring-red-500"
+                          )}
                           data-testid="textarea-message"
                         />
                       </FormControl>

@@ -16,8 +16,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const data = contactFormSchema.parse(req.body);
 
+      const accessKey = process.env.WEB3FORMS_ACCESS_KEY || "befee246-f31b-4e6d-80dc-58221bbe6030";
+      
+      if (!process.env.WEB3FORMS_ACCESS_KEY) {
+        console.warn("⚠️ WARNING: WEB3FORMS_ACCESS_KEY not set in environment. Using fallback key (not secure for production).");
+      }
+
       const payload = {
-        access_key: "befee246-f31b-4e6d-80dc-58221bbe6030",
+        access_key: accessKey,
         name: data.name,
         email: data.email,
         phone: data.phone || "",
@@ -41,7 +47,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         res.json({ success: true, message: "Email envoyé avec succès" });
       } else {
         res.status(400).json({ success: false, message: result.message });
-      }
+      } 
     } catch (error) {
       if (error instanceof z.ZodError) {
         res.status(400).json({ success: false, message: "Données invalides", errors: error.errors });
