@@ -215,30 +215,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-52 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Fluid Gradient Background */}
-        <div className="absolute inset-0 -z-10 overflow-hidden gradient-bg">
-          <svg xmlns="http://www.w3.org/2000/svg" className="hidden">
-            <defs>
-              <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
-                <feBlend in="SourceGraphic" in2="goo" />
-              </filter>
-            </defs>
-          </svg>
-          
-          <div className="gradients-container">
-            <div className="g1"></div>
-            <div className="g2"></div>
-            <div className="g3"></div>
-            <div className="g4"></div>
-            <div className="g5"></div>
-          </div>
-        </div>
-        
-        {/* Subtle overlay for content readability */}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/70 via-transparent to-background/70" />
+      <section className="pt-52 pb-20 px-4 sm:px-6 lg:px-8 relative">
 
         <div className="max-w-7xl mx-auto relative">
           <div className="max-w-4xl mx-auto text-center fade-in">
