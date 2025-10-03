@@ -743,7 +743,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="md:col-span-2">
               <div className="mb-4">
-                <Logo className="h-16 w-auto" />
+                <Logo className="h-32 w-auto" />
               </div>
               <p className="text-secondary-foreground/80 mb-6">
                 Agence web moderne basée à Bordeaux, spécialisée dans la création de sites performants et l'optimisation pour les moteurs de recherche classiques et IA.
