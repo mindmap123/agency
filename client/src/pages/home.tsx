@@ -224,7 +224,7 @@ export default function Home() {
             </h1>
 
             <p className="text-xl sm:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto">
-              On ne fait pas du marketing. <strong className="text-foreground font-semibold">On génère des résultats.</strong>
+              <strong className="text-foreground font-semibold">Votre croissance, notre seul KPI</strong>
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
