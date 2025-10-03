@@ -314,7 +314,7 @@ export default function Home() {
             </div>
 
             <div className="bg-card p-8 rounded-lg border border-border hover:shadow-lg transition-shadow fade-in" data-testid="card-service-4">
-              <div className="text-4xl mb-4">♻️</div>
+              <div className="text-4xl mb-4">📍</div>
               <h3 className="text-xl font-bold mb-3">Première position locale GMB</h3>
               <p className="text-muted-foreground">On transforme votre fiche Google My Business en machine à attirer des clients, tout est optimisé pour être au top position.</p>
             </div>
