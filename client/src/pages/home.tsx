@@ -258,7 +258,7 @@ export default function Home() {
                 className="w-full sm:w-auto bg-primary text-primary-foreground px-8 py-3 rounded-md text-base font-semibold hover:bg-primary/90 transition-colors"
                 data-testid="button-hero-start-project"
               >
-                Nous contacter
+                Lancer mon projet
               </a>
               <a
                 href="https://cal.com/nextlevelagency"
