@@ -1,4 +1,4 @@
-import logoImage from "@assets/Logo Agence Créative Moderne_1759479488221.png";
+import logoImage from "@assets/next-level-logo.png";
 
 interface LogoProps {
   className?: string;
