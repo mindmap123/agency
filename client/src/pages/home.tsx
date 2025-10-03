@@ -742,7 +742,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="md:col-span-2">
-              <div className="mb-4">
+              <div className="mt-[0px] mb-[0px]">
                 <Logo className="h-32 w-auto" />
               </div>
               <p className="text-secondary-foreground/80 mb-6">
