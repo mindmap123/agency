@@ -108,14 +108,39 @@ export default function Home() {
   }, []);
 
   const onSubmit = async (data: ContactFormValues) => {
-    console.log("Form data:", data);
-    
-    toast({
-      title: "Message envoyé !",
-      description: "Nous vous répondrons dans un délai de 24h.",
-    });
-    
-    form.reset();
+    try {
+      const formData = new FormData();
+      formData.append("access_key", "befee246-f31b-4e6d-80dc-58221bbe6030");
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("phone", data.phone || "");
+      formData.append("service", data.service);
+      formData.append("message", data.message);
+      formData.append("subject", "Nouveau contact Next Level - " + data.service);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Message envoyé !",
+          description: "Nous vous répondrons dans un délai de 24h.",
+        });
+        form.reset();
+      } else {
+        throw new Error("Erreur lors de l'envoi");
+      }
+    } catch (error) {
+      toast({
+        title: "Erreur",
+        description: "Une erreur s'est produite. Veuillez réessayer.",
+        variant: "destructive",
+      });
+    }
   };
 
   const expertises = [
