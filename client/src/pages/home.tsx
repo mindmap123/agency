@@ -432,8 +432,7 @@ export default function Home() {
             </div>
             <div className="order-1 md:order-2">
               <h2 className="text-3xl sm:text-5xl font-bold mb-6">
-                <span className="accent-text">SEO, GEO et Acquisition Digitale</span> <br />
-                Propulsez votre visibilité en ligne
+                <span className="accent-text">SEO, GEO et Acquisition Digitale</span>
               </h2>
               <p className="text-lg sm:text-xl text-muted-foreground mb-6">
                 Le référencement est le pilier de votre succès digital. Next Level déploie une stratégie d'acquisition complète qui combine les techniques éprouvées du SEO traditionnel et les innovations du GEO (Generative Search Optimization). Notre objectif : vous positionner là où vos clients vous cherchent, que ce soit sur Google, ChatGPT, Claude ou Perplexity.
