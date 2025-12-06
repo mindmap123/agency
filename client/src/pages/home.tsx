@@ -151,7 +151,7 @@ export default function Home() {
     },
     {
       icon: Sparkles,
-      title: "GSO - Recherche IA",
+      title: "GEO - Recherche IA",
       description: "Optimisation pour les moteurs de recherche IA : ChatGPT, Claude, Perplexity et Gemini.",
     },
     {
@@ -179,10 +179,10 @@ export default function Home() {
   ];
 
   const technologies = [
-    { name: "WordPress", icon: Code },
-    { name: "Shopify", icon: ShoppingCart },
-    { name: "React", icon: Code },
-    { name: "Next.js", icon: Code },
+    { name: "WordPress", logo: "/logos/wordpress.svg" },
+    { name: "Shopify", logo: "/logos/shopify.svg" },
+    { name: "React", logo: "/logos/react.svg" },
+    { name: "Next.js", logo: "/logos/nextjs.svg" },
   ];
 
   const projects = [
@@ -209,49 +209,20 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-44">
-            <div className="flex-shrink-0">
-              <a href="/" className="block" data-testid="logo-link">
-                <Logo className="h-40 w-auto" />
-              </a>
-            </div>
+      <nav className="fixed top-0 left-0 right-0 z-50">
+        <div className="absolute inset-0 bg-white/35 backdrop-blur-3xl backdrop-saturate-150 border-b border-white/70 shadow-[0_12px_40px_rgba(15,23,42,0.08)]" />
+        <div className="absolute inset-x-0 h-px top-full bg-gradient-to-r from-transparent via-primary/50 to-transparent blur-sm" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="flex items-center justify-between h-24">
+            <a href="/" className="flex items-center" data-testid="logo-link">
+              <Logo className="h-32 w-auto" />
+            </a>
 
-            <div className="flex items-center">
-              <a
-                href="https://cal.com/nextlevelagency"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-primary text-primary-foreground px-6 py-2.5 rounded-lg hover:bg-primary/90 transition-all font-medium text-sm inline-flex items-center gap-2 shadow-lg shadow-primary/25 group"
-                data-testid="link-rdv-nav"
-              >
-                Prendre RDV
-                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      {/* Hero Section */}
-      <section className="pt-52 pb-20 px-4 sm:px-6 lg:px-8 relative">
-
-        <div className="max-w-7xl mx-auto relative">
-          <div className="max-w-4xl mx-auto text-center fade-in">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-foreground">
-              Dominez votre marché avec Next Level
-            </h1>
-
-            <p className="text-xl sm:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto">
-              <strong className="text-foreground font-semibold">Votre croissance, notre seul KPI</strong>
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex items-center gap-6">
               <a
                 href="#contact"
-                className="w-full sm:w-auto bg-primary text-primary-foreground px-8 py-3 rounded-md text-base font-semibold hover:bg-primary/90 transition-colors"
-                data-testid="button-hero-start-project"
+                className="hidden sm:inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                data-testid="link-project-nav"
               >
                 Lancer mon projet
               </a>
@@ -259,10 +230,57 @@ export default function Home() {
                 href="https://cal.com/nextlevelagency"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto border border-border px-8 py-3 rounded-md text-base font-semibold hover:border-primary hover:text-primary transition-colors"
+                className="relative inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold text-primary-foreground bg-primary hover:bg-primary/90 transition-all shadow-[0_0_28px_rgba(122,63,255,0.35)]"
+                data-testid="link-rdv-nav"
+              >
+                <span className="relative">Prendre RDV</span>
+                <ArrowUpRight className="w-4 h-4 relative" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden pt-32 sm:pt-36 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 gradient-veil" />
+        <div className="halo halo-primary w-[460px] h-[460px] -left-32 top-10" />
+        <div className="halo halo-secondary w-[380px] h-[380px] right-10 -top-12" />
+        <div className="halo halo-amber w-[300px] h-[300px] left-1/2 -translate-x-1/2 bottom-10" />
+        <div className="grid-overlay" />
+
+        <div className="max-w-7xl mx-auto relative">
+          <div className="max-w-5xl mx-auto text-center fade-in">
+            <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-secondary-foreground bg-white/80 border border-border backdrop-blur">
+              <span className="w-2 h-2 rounded-full bg-secondary shadow-[0_0_12px_rgba(255,193,7,0.8)]" />
+              Next Level — Web, GEO, Growth
+            </div>
+
+            <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] text-foreground">
+              Dominez votre marché avec un site qui impose le niveau supérieur
+            </h1>
+
+            <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
+              Branding, web, SEO/GEO et performance orchestrés comme une seule machine à conversions. 48h pour livrer un premier impact.
+            </p>
+
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="#contact"
+                className="relative w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-base font-semibold text-primary-foreground bg-primary hover:bg-primary/90 transition-all shadow-[0_24px_80px_rgba(122,63,255,0.28)] light-sweep overflow-hidden"
+                data-testid="button-hero-start-project"
+              >
+                <span className="relative">Lancer mon projet</span>
+                <ArrowUpRight className="w-5 h-5 relative" />
+              </a>
+              <a
+                href="https://cal.com/nextlevelagency"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full px-8 py-3 text-base font-semibold border border-border bg-white/70 text-foreground hover:border-primary hover:text-primary transition-colors backdrop-blur"
                 data-testid="button-hero-discover-services"
               >
-                Prendre RDV 📅
+                Voir les réalisations
               </a>
             </div>
           </div>
@@ -272,23 +290,27 @@ export default function Home() {
       {/* Agency Intro Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-7xl mx-auto">
-          <div className="max-w-4xl mx-auto text-center fade-in">
+          <div className="text-center mb-12 fade-in">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               L'agence web Next Level
             </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Depuis près de 5 ans, Next Level accompagne les entreprises dans leur croissance digitale en créant des solutions sur-mesure, performantes et pensées pour générer des résultats concrets.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8">
-              Notre réactivité et notre approche orientée business nous ont permis de bâtir des partenariats solides et durables avec nos clients, bien au-delà d'une simple relation prestataire.
-            </p>
-            <a
-              href="#realisations"
-              className="inline-flex items-center gap-2 text-primary font-semibold hover:underline group"
-            >
-              Découvrir l'agence 
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center fade-in">
+            <div className="space-y-6">
+              <p className="text-lg text-muted-foreground">
+                Depuis près de 5 ans, Next Level accompagne les entreprises dans leur croissance digitale en créant des solutions sur-mesure, performantes et pensées pour générer des résultats concrets.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                Notre réactivité et notre approche orientée business nous ont permis de bâtir des partenariats solides et durables avec nos clients, bien au-delà d'une simple relation prestataire.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src="/images/TeamNextLevel.webp" 
+                alt="L'équipe Next Level" 
+                className="w-full max-w-md lg:max-w-lg rounded-xl shadow-lg object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -323,7 +345,7 @@ export default function Home() {
 
             <div className="bg-card p-8 rounded-lg border border-border hover:shadow-lg transition-shadow fade-in" data-testid="card-service-2">
               <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-bold mb-3">GSO – Recherche IA</h3>
+              <h3 className="text-xl font-bold mb-3">GEO – Recherche IA</h3>
               <p className="text-muted-foreground">Soyez visibles là où vos prospects posent déjà leurs questions : ChatGPT, Claude, Perplexity, Gemini.</p>
             </div>
 
@@ -387,8 +409,8 @@ export default function Home() {
                 key={index}
                 className="bg-card p-6 rounded-lg border border-border hover:shadow-lg transition-shadow text-center"
               >
-                <div className="w-16 h-16 bg-primary/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                  <tech.icon className="w-8 h-8 text-primary" />
+                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <img src={tech.logo} alt={tech.name} className="w-12 h-12 object-contain" />
                 </div>
                 <h3 className="font-bold text-lg">{tech.name}</h3>
               </div>
@@ -397,20 +419,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SEO, GSO et Acquisition Digitale Section */}
+      {/* SEO, GEO et Acquisition Digitale Section */}
       <section id="gso" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-muted/20">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 fade-in">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-6">
-              <span className="accent-text">SEO, GSO et Acquisition Digitale</span> <br />
-              Propulsez votre visibilité en ligne
-            </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto mb-6">
-              Le référencement est le pilier de votre succès digital. Next Level déploie une stratégie d'acquisition complète qui combine les techniques éprouvées du SEO traditionnel et les innovations du GSO (Generative Search Optimization). Notre objectif : vous positionner là où vos clients vous cherchent, que ce soit sur Google, ChatGPT, Claude ou Perplexity.
-            </p>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto mb-8">
-              Nous mettons en place des stratégies data-driven et des techniques de growth hacking pour maximiser votre ROI. Selon votre secteur et vos objectifs, nous activons les leviers les plus performants : SEA, marketing automation, optimisation technique ou création de contenu optimisé pour les moteurs IA.
-            </p>
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 fade-in">
+            <div className="flex justify-center order-2 md:order-1">
+              <img 
+                src="/images/seo-gso-illustration.jpg" 
+                alt="SEO et GEO - Optimisation pour moteurs de recherche et IA" 
+                className="w-full max-w-md lg:max-w-lg rounded-xl shadow-lg object-cover"
+              />
+            </div>
+            <div className="order-1 md:order-2">
+              <h2 className="text-3xl sm:text-5xl font-bold mb-6">
+                <span className="accent-text">SEO, GEO et Acquisition Digitale</span> <br />
+                Propulsez votre visibilité en ligne
+              </h2>
+              <p className="text-lg sm:text-xl text-muted-foreground mb-6">
+                Le référencement est le pilier de votre succès digital. Next Level déploie une stratégie d'acquisition complète qui combine les techniques éprouvées du SEO traditionnel et les innovations du GEO (Generative Search Optimization). Notre objectif : vous positionner là où vos clients vous cherchent, que ce soit sur Google, ChatGPT, Claude ou Perplexity.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                Nous mettons en place des stratégies data-driven et des techniques de growth hacking pour maximiser votre ROI. Selon votre secteur et vos objectifs, nous activons les leviers les plus performants : SEA, marketing automation, optimisation technique ou création de contenu optimisé pour les moteurs IA.
+              </p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 fade-in">
@@ -426,7 +457,7 @@ export default function Home() {
               <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
                 <Bot className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">GSO - Optimisation pour moteurs IA</h3>
+              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">GEO - Optimisation pour moteurs IA</h3>
               <p className="text-muted-foreground">Visibilité sur ChatGPT, Claude, Perplexity, Gemini, DeepSeek, Grok</p>
             </div>
 
@@ -442,7 +473,7 @@ export default function Home() {
               <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
                 <FileText className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">Rédaction de contenu SEO/GSO</h3>
+              <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">Rédaction de contenu SEO/GEO</h3>
               <p className="text-muted-foreground">Contenus optimisés pour humains et intelligences artificielles</p>
             </div>
 
@@ -474,26 +505,24 @@ export default function Home() {
           <div className="text-center fade-in">
             <h3 className="text-2xl font-bold mb-3 text-foreground">Problème/Solution</h3>
             <p className="text-xl text-muted-foreground mb-6">
-              Google c'est hier. Les IA, c'est maintenant. On vous y met.
+              La recherche Google, c'est fini. L'IA, c'est maintenant. On vous fait passer au next level.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
               {[
-                { name: "ChatGPT", bg: "from-emerald-500/20 to-teal-500/20", icon: "bg-gradient-to-br from-emerald-500 to-teal-600" },
-                { name: "Claude", bg: "from-amber-500/20 to-orange-500/20", icon: "bg-gradient-to-br from-amber-500 to-orange-600" },
-                { name: "Perplexity", bg: "from-blue-500/20 to-cyan-500/20", icon: "bg-gradient-to-br from-blue-500 to-cyan-600" },
-                { name: "Gemini", bg: "from-purple-500/20 to-pink-500/20", icon: "bg-gradient-to-br from-purple-500 to-pink-600" },
-                { name: "DeepSeek", bg: "from-indigo-500/20 to-blue-500/20", icon: "bg-gradient-to-br from-indigo-500 to-blue-600" },
-                { name: "Grok", bg: "from-slate-500/20 to-gray-500/20", icon: "bg-gradient-to-br from-slate-500 to-gray-600" },
+                { name: "ChatGPT", logo: "/logos/chatgpt.svg", size: "w-10 h-10" },
+                { name: "Claude", logo: "/logos/claude.svg", size: "w-10 h-10" },
+                { name: "Perplexity", logo: "/logos/perplexity.svg", size: "w-10 h-10" },
+                { name: "Gemini", logo: "/logos/gemini.svg", size: "w-16 h-16" },
+                { name: "DeepSeek", logo: "/logos/deepseek.svg", size: "w-10 h-10" },
+                { name: "Grok", logo: "/logos/grok.svg", size: "w-10 h-10" },
               ].map((llm, index) => (
                 <div
                   key={index}
                   className="group bg-card p-4 rounded-lg border border-border text-center hover:shadow-xl hover:scale-105 transition-all duration-300"
                   data-testid={`llm-${index}`}
                 >
-                  <div className={`w-12 h-12 bg-gradient-to-br ${llm.bg} rounded-xl mx-auto mb-2 flex items-center justify-center group-hover:rotate-6 transition-transform duration-300`}>
-                    <div className={`w-6 h-6 ${llm.icon} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <Sparkles className="w-4 h-4 text-white" />
-                    </div>
+                  <div className="w-12 h-12 mx-auto mb-2 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <img src={llm.logo} alt={llm.name} className={`${llm.size} object-contain`} />
                   </div>
                   <span className="font-semibold text-xs">{llm.name}</span>
                 </div>
@@ -540,16 +569,16 @@ export default function Home() {
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-1">
-                  Quelle est la différence entre SEO et GSO ?
+                  Quelle est la différence entre SEO et GEO ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Le SEO (Search Engine Optimization) optimise votre visibilité sur les moteurs de recherche traditionnels comme Google. Le GSO (Generative Search Optimization) vous positionne dans les réponses des intelligences artificielles comme ChatGPT, Claude, Perplexity, Gemini et DeepSeek. Aujourd'hui, vos clients ne cherchent plus seulement sur Google : ils posent leurs questions directement aux IA. Next Level maîtrise les deux pour vous garantir une visibilité maximale.
+                  Le SEO (Search Engine Optimization) optimise votre visibilité sur les moteurs de recherche traditionnels comme Google. Le GEO (Generative Search Optimization) vous positionne dans les réponses des intelligences artificielles comme ChatGPT, Claude, Perplexity, Gemini et DeepSeek. Aujourd'hui, vos clients ne cherchent plus seulement sur Google : ils posent leurs questions directement aux IA. Next Level maîtrise les deux pour vous garantir une visibilité maximale.
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-2">
                 <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-2">
-                  Pourquoi devrais-je investir dans le GSO maintenant ?
+                  Pourquoi devrais-je investir dans le GEO maintenant ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
                   Parce que vos concurrents ne le font pas encore. Chaque jour, des millions de personnes obtiennent des recommandations d'entreprises via ChatGPT ou Claude. Si vous n'y êtes pas, vous perdez ces clients au profit de ceux qui ont anticipé. Nous sommes pionniers de cette technologie à Bordeaux et vous donnons 2-3 ans d'avance sur votre marché.
@@ -561,7 +590,7 @@ export default function Home() {
                   Combien coûte un site web avec Next Level ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Un site vitrine professionnel démarre à 1 000€. Les sites e-commerce commencent à 5 000€. Nos prestations SEO/GSO sont proposées en forfaits mensuels à partir de 800€. Chaque projet est unique : nous adaptons nos solutions à vos objectifs et votre budget pour maximiser votre retour sur investissement.
+                  Un site vitrine professionnel démarre à 1 000€. Les sites e-commerce commencent à 5 000€. Nos prestations SEO/GEO sont proposées en forfaits mensuels à partir de 800€. Chaque projet est unique : nous adaptons nos solutions à vos objectifs et votre budget pour maximiser votre retour sur investissement.
                 </AccordionContent>
               </AccordionItem>
 
@@ -594,10 +623,10 @@ export default function Home() {
 
               <AccordionItem value="item-7">
                 <AccordionTrigger className="text-left text-lg font-semibold" data-testid="faq-trigger-7">
-                  Combien de temps avant de voir des résultats en SEO/GSO ?
+                  Combien de temps avant de voir des résultats en SEO/GEO ?
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground">
-                  Le SEO traditionnel montre des résultats tangibles entre 3 et 6 mois. Le GSO peut être plus rapide selon votre secteur : certains clients apparaissent dans les IA en quelques semaines. Nous fournissons des rapports mensuels détaillés pour suivre précisément votre progression et ajuster la stratégie en temps réel.
+                  Le SEO traditionnel montre des résultats tangibles entre 3 et 6 mois. Le GEO peut être plus rapide selon votre secteur : certains clients apparaissent dans les IA en quelques semaines. Nous fournissons des rapports mensuels détaillés pour suivre précisément votre progression et ajuster la stratégie en temps réel.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -721,7 +750,7 @@ export default function Home() {
                             <SelectItem value="conversion">
                               Créer un site qui convertit
                             </SelectItem>
-                            <SelectItem value="seo-gso">Exploser mon trafic (SEO/GSO)</SelectItem>
+                            <SelectItem value="seo-gso">Exploser mon trafic (SEO/GEO)</SelectItem>
                             <SelectItem value="ia">Dominer sur les moteurs IA</SelectItem>
                             <SelectItem value="ads">Lancer des campagnes Google Ads rentables</SelectItem>
                             <SelectItem value="refonte">Refondre mon site existant</SelectItem>
@@ -775,25 +804,25 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-secondary text-secondary-foreground py-16 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-[#1079E5] text-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="md:col-span-2">
               <div className="mt-[0px] mb-[0px]">
-                <Logo className="h-32 w-auto" />
+                <Logo className="h-32 w-auto brightness-0 invert" />
               </div>
-              <p className="text-secondary-foreground/80 mb-6">
+              <p className="text-white/80 mb-6">
                 Agence web moderne basée à Bordeaux, spécialisée dans la création de sites performants et l'optimisation pour les moteurs de recherche classiques et IA.
               </p>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Liens rapides</h4>
+              <h4 className="font-semibold mb-4 text-white">Liens rapides</h4>
               <ul className="space-y-3">
                 <li>
                   <a
                     href="#"
-                    className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
+                    className="text-white/80 hover:text-white transition-colors"
                     data-testid="link-footer-home"
                   >
                     Accueil
@@ -802,7 +831,7 @@ export default function Home() {
                 <li>
                   <a
                     href="#expertises"
-                    className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
+                    className="text-white/80 hover:text-white transition-colors"
                     data-testid="link-footer-services"
                   >
                     Expertises
@@ -811,16 +840,16 @@ export default function Home() {
                 <li>
                   <a
                     href="#gso"
-                    className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
+                    className="text-white/80 hover:text-white transition-colors"
                     data-testid="link-footer-gso"
                   >
-                    GSO
+                    GEO
                   </a>
                 </li>
                 <li>
                   <a
                     href="#contact"
-                    className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
+                    className="text-white/80 hover:text-white transition-colors"
                     data-testid="link-footer-contact"
                   >
                     Contact
@@ -829,40 +858,40 @@ export default function Home() {
               </ul>
             </div>
 
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <ul className="space-y-3 text-secondary-foreground/80">
-                <li className="flex items-start gap-2">
-                  <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                  <span>Bordeaux, France</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Mail className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                  <a
-                    href="mailto:contact@nextlevel-web.fr"
-                    className="hover:text-secondary-foreground transition-colors"
-                    data-testid="link-footer-email"
-                  >
-                    contact@nextlevel-web.fr
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://cal.com/nextlevelagency"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 bg-primary text-primary-foreground px-3 py-1.5 rounded text-sm font-semibold hover:bg-primary/90 transition-colors"
-                    data-testid="link-footer-booking"
-                  >
-                    Prendre RDV
-                    <ArrowUpRight className="w-4 h-4" />
-                  </a>
-                </li>
-              </ul>
+            <div className="flex flex-col justify-between">
+              <div>
+                <h4 className="font-semibold mb-4 text-white">Contact</h4>
+                <ul className="space-y-3 text-white/80">
+                  <li className="flex items-start gap-2">
+                    <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                    <span>Bordeaux, France</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Mail className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                    <a
+                      href="mailto:nextlevelagency33@gmail.com"
+                      className="hover:text-white transition-colors underline"
+                      data-testid="link-footer-email"
+                    >
+                      Nous contacter par mail
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <a
+                href="https://cal.com/nextlevelagency"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white text-[#1079E5] px-6 py-3 rounded-lg text-base font-bold hover:scale-105 transition-all duration-500 shadow-lg hover:shadow-2xl hover:shadow-white/30 animate-[float_3s_ease-in-out_infinite] self-start"
+                data-testid="link-footer-booking"
+              >
+                Prendre RDV
+                <ArrowUpRight className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
-          <div className="pt-8 border-t border-secondary-foreground/20 text-center text-secondary-foreground/70 text-sm">
+          <div className="pt-8 border-t border-white/20 text-center text-white/70 text-sm">
             <p>
               © 2025 Next Level. Tous droits réservés.
             </p>

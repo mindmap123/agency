@@ -1,5 +1,3 @@
-import logoImage from "@assets/next-level-logo.png";
-
 interface LogoProps {
   className?: string;
 }
@@ -7,7 +5,7 @@ interface LogoProps {
 export default function Logo({ className = "h-8" }: LogoProps) {
   return (
     <img 
-      src={logoImage} 
+      src="/logos/logo.png" 
       alt="Next Level - Agence web Bordeaux" 
       className={className}
     />
